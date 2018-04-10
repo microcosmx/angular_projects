@@ -1,0 +1,81 @@
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/all';
+@import '~@nebular/theme/styles/global/bootstrap/hero-buttons';
+
+// loading progress bar theme
+@import './pace.theme';
+
+// install the framework and custom global styles
+@include nb-install() {
+
+  // framework global styles
+  @include nb-theme-global();
+  @include nb-auth-global();
+
+  // loading progress bar
+  @include ngx-pace-theme();
+
+  .custom-control .custom-control-indicator {
+    border-radius: 50%; 
+  }
+
+
+  //tabset
+  nb-tabset-ext {
+    // TODO: move to global mixin
+    @include nb-scrollbars(
+        nb-theme(scrollbar-fg),
+        nb-theme(scrollbar-bg),
+        nb-theme(scrollbar-width));
+
+    ul {
+      font-family: nb-theme(tabs-font-family);
+      font-size: nb-theme(tabs-font-size);
+
+      padding: 0 nb-theme(tabs-padding);
+      border-bottom: 1px solid nb-theme(tabs-separator);
+
+      li {
+        background: nb-theme(tabs-header-bg);
+
+        a {
+          padding: nb-theme(tabs-padding);
+          color: nb-theme(tabs-fg);
+
+          &:hover {
+            color: nb-theme(tabs-fg-heading);
+            font-weight: nb-theme(tabs-active-font-weight);
+          }
+
+          &::before {
+            background: nb-theme(tabs-selected);
+
+            @include nb-for-theme(cosmic) {
+              @include btn-hero-success-gradient();
+              box-shadow: 0 0 16px -2px btn-hero-success-middle-color();
+            }
+          }
+        }
+
+        &.active {
+          background: nb-theme(tabs-active-bg);
+
+          a {
+            font-weight: nb-theme(tabs-active-font-weight);
+            color: nb-theme(tabs-fg-heading);
+          }
+        }
+      }
+    }
+
+    nb-tab-ext {
+      font-family: nb-theme(tabs-content-font-family);
+      font-size: nb-theme(tabs-content-font-size);
+      color: nb-theme(tabs-fg-text);
+      background-color: nb-theme(tabs-bg);
+      padding: nb-theme(tabs-content-padding);
+    }
+  }
+};

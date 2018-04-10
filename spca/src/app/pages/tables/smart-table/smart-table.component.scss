@@ -1,0 +1,16 @@
+
+
+nb-card {
+  transform: translate3d(0, 0, 0);
+  // border: 1px solid red;
+}
+
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  ng2-smart-table table tr {
+    th, td{
+      border: medium none;
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "xinfos": [{
+    "reason": "optimized",
+    "name": "1001",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1002",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1003",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1004",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1005",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1006",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }],
+  
+  "series": [{
+    "name": "Cost",
+    "series": [
+      {
+        "name": "1001",
+        "value": 6
+      },
+      {
+        "name": "1002",
+        "value": 5
+      },
+      {
+        "name": "1003",
+        "value": 3
+      },
+      {
+        "name": "1004",
+        "value": 1
+      },
+      {
+        "name": "1005",
+        "value": 3
+      },
+      {
+        "name": "1006",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "name": "Ref Cost",
+    "series": [
+      {
+        "name": "1001",
+        "value": 3
+      },
+      {
+        "name": "1002",
+        "value": 3
+      },
+      {
+        "name": "1003",
+        "value": 6
+      },
+      {
+        "name": "1004",
+        "value":7
+      },
+      {
+        "name": "1005",
+        "value": 8
+      },
+      {
+        "name": "1006",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "name": "New Price",
+    "series": [
+      {
+        "name": "1001",
+        "value": 5
+      },
+      {
+        "name": "1002",
+        "value": 1
+      },
+      {
+        "name": "1003",
+        "value": 2
+      },
+      {
+        "name": "1004",
+        "value": 3
+      },
+      {
+        "name": "1005",
+        "value": 4
+      },
+      {
+        "name": "1006",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "name": "Current Price",
+    "series": [
+      {
+        "name": "1001",
+        "value": 1
+      },
+      {
+        "name": "1002",
+        "value": 1
+      },
+      {
+        "name": "1003",
+        "value": 3
+      },
+      {
+        "name": "1004",
+        "value": 3
+      },
+      {
+        "name": "1005",
+        "value": 6
+      },
+      {
+        "name": "1006",
+        "value": 10
+      }
+    ]
+  }],
+  "pinfos": {
+    "Cost": {
+      "1002": [
+        {"name": "info0", "value": "value0"}
+      ],
+      "1004": [
+        {"name": "info1", "value": "value1"},
+        {"name": "info2", "value": "value2"},
+        {"name": "info3", "value": "value3"}
+      ]
+    }
+  }
+}
+

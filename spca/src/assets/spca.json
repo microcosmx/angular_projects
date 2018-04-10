@@ -1,0 +1,12 @@
+[{
+    "column1": "Scenario ID: 111",
+    "column2": "Product: 222",
+    "column3": "Ref Competitor: 333"
+  }, {
+    "column1": "Category: Coffee",
+    "column2": "Zone/Stores: 444",
+    "column3": "Ref Cost Type: Line mode"
+  }, {
+    "column1": "Division: Chain",
+    "column2": "Line Group: 666"
+  }]
