@@ -23,12 +23,15 @@ import { TrafficChartComponent } from './traffic/traffic-chart.component';
 
 import { ChartsModule } from '../charts/charts.module';
 
+import { AgGridModule } from 'ag-grid-angular';
+
 
 @NgModule({
   imports: [
     ThemeModule,
     NgxEchartsModule,
     ChartsModule,
+    AgGridModule.withComponents([]),
   ],
   declarations: [
     DashboardComponent,

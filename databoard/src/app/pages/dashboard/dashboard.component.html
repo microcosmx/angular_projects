@@ -1,6 +1,17 @@
 <div class="row">
   <div class="col-xxxl-6 col-md-6">
-    <ngx-temperature></ngx-temperature>
+    <!--button (click)="getSelectedRows()">Get Selected Rows</button-->
+    <ag-grid-angular 
+        #agGrid
+        style="width: 100%; height: 560px;" 
+        class="ag-theme-balham"
+        [enableSorting]="true"
+        [enableFilter]="true"
+        [rowData]="rowData | async" 
+        [columnDefs]="columnDefs"
+        rowSelection="multiple"
+        >
+    </ag-grid-angular>
   </div>
 
   <div class="col-xxxl-6 col-md-6">
