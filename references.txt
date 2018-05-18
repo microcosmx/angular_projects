@@ -1,0 +1,172 @@
+
+
+help:
+ng help
+ng new PROJECT-NAME
+cd PROJECT-NAME
+ng serve
+http://localhost:4200/
+ng serve --host 0.0.0.0 --port 4201
+
+init:
+Component: 	ng g component my-new-component
+Directive: 	ng g directive my-new-directive
+Pipe: 	ng g pipe my-new-pipe
+Service: 	ng g service my-new-service
+
+build:
+`npm i -g @angular/cli`
+`npm i`
+(npm install --production)
+npm cache clean
+ng build
+ng build --base-href ./
+ng build --prod --base-href ./ (aot)
+
+run:
+npm start
+ng serve --host
+ng serve --target=production (aot)
+npm run build
+npm run start
+npm run starts
+
+ng generate:
+ng g component datachart
+    ng generate directive my-directive - 生成一个新指令
+    ng generate pipe my-pipe - 生成一个新管道
+    ng generate service my-service - 生成一个新服务
+    ng generate route my-route - 生成一个新路由
+    ng generate class my-class - 生成一个简易的模型类
+
+add library: (添加基于当前angular-cli版本的lib版本)
+npm install --save @ng-bootstrap/ng-bootstrap
+npm install --save angular-in-memory-web-api
+npm install --save jqwidgets-scripts
+
+
+
+
+angular:
+https://angular.io/docs
+
+js api:
+https://github.com/lodash/lodash
+https://lodash.com/docs
+
+angular ui:
+https://angular.io/resources/
+
+icon & images:
+http://www.iconfont.cn/
+
+i18n:
+http://www.ngx-translate.com/
+https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-angular-app-with-ngx-translate
+
+nebular:
+https://github.com/akveo/ngx-admin
+https://github.com/akveo/nebular
+https://akveo.github.io/nebular/?utm_source=github&utm_medium=nebular_readme#/docs/components/tabs
+https://akveo.github.io/nebular/?utm_source=github&utm_medium=nebular_readme#/docs/getting-started/what-is-nebular
+
+bootstrap style:
+https://getbootstrap.com/docs/3.3/css/
+http://v3.bootcss.com/css/
+
+ngx-bootstrap:
+https://valor-software.com/ngx-bootstrap/#/getting-started
+ng-bootstrap:
+https://ng-bootstrap.github.io/
+
+ngx-echarts:
+https://github.com/xieziyu/ngx-echarts
+
+ngx-charts(d3):
+https://swimlane.github.io/ngx-charts/
+https://github.com/swimlane/ngx-charts
+https://swimlane.gitbooks.io/ngx-charts/content/charts/line-chart.html
+nvd3:
+https://github.com/krispo/ng2-nvd3
+http://nvd3.org/examples/
+
+ng2-smart-table:
+https://akveo.github.io/ng2-smart-table/#/
+https://akveo.github.io/ng2-smart-table/#/documentation
+
+ag-grid:
+https://www.ag-grid.com/
+
+amexio:
+demo.amexio.tech
+https://github.com/meta-magic/amexio.github.io
+https://amexio.tech/
+http://www.amexio.org/showcaseapp/v3.2/index.html#/home
+http://www.amexio.org/demoapp/#/
+npm install amexio-ng-extensions --save
+npm install amexio-ng-extensions@3.2.2 --save
+npm install amexio-ng-extensions@3.0.11 --save
+npm install popper.js@^1.12.9 --save
+
+https://www.jqwidgets.com/angular/
+### npm install jqwidgets-scripts --save
+npm i -g create-jqwidgets-angular-app 
+create-jqwidgets-angular-app my-app
+cd my-app
+npm start
+
+ignite:
+https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid.html
+
+devextreme:
+https://js.devexpress.com/Demos/WidgetsGallery/Demo
+https://github.com/DevExpress/devextreme-angular#
+git clone --depth 1 https://github.com/DevExpress/devextreme-angular.git
+cd devextreme-angular
+npm install
+npm start
+http://127.0.0.1:8875/examples/
+
+https://material.angularjs.org/latest/
+http://angular-ui.github.io/bootstrap/
+https://www.npmjs.com/package/ng2-bootstrap
+https://valor-software.com/ngx-bootstrap/#/
+https://onsen.io/
+https://semantic-ui.com/
+https://github.com/myopenresources/cc
+https://github.com/gdi2290/awesome-angular
+https://github.com/brillout/awesome-angular-components
+
+x1 ui ibm:
+https://pages.github.ibm.com/peretz/neutrino/
+https://pages.github.ibm.com/peretz/neutrino/documentation/index.html 
+http://peretz1.fyre.ibm.com/developers/using
+http://peretz1.fyre.ibm.com/
+http://x1showcase.emmlabs.ibm.com:5678/
+https://github.ibm.com/peretz-legacy/getting-started/wiki/Using-an-Angular-component
+
+
+
+
+
+
+Testing:
+
+karma:
+Karma是一个Test Runner，可以让测试代码运行在浏览器沙盒里面用来测试其正确性。
+http://karma-runner.github.io/1.0/index.html
+npm install -g karma
+npm install -g karma-cli  
+
+Jasmine:
+Jasmine是一个主流的javascript端测试框架，类似于JUnit之类的框架，支持的功能也类似。
+https://jasmine.github.io/
+
+protractor: (e2e)
+end to end test framework 
+http://www.protractortest.org/
+
+
+
+
+

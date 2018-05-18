@@ -143,6 +143,35 @@
         "value": 10
       }
     ]
+  },
+  {
+    "name": "Competitor Price",
+    "series": [
+      {
+        "name": "1001",
+        "value": 6
+      },
+      {
+        "name": "1002",
+        "value": 6
+      },
+      {
+        "name": "1003",
+        "value": 1
+      },
+      {
+        "name": "1004",
+        "value": 2
+      },
+      {
+        "name": "1005",
+        "value": 3
+      },
+      {
+        "name": "1006",
+        "value": 6
+      }
+    ]
   }],
   "pinfos": {
     "Cost": {

@@ -25,7 +25,7 @@ import {
 @Component({
   selector: 'ngx-charts-line-chart-ext',
   template: `
-    <ngx-charts-chart
+    <ngx-charts-chart-ext
       [view]="[width, height]"
       [showLegend]="legend"
       [legendOptions]="legendOptions"
@@ -141,7 +141,7 @@ import {
           />
         </svg:g>
       </svg:g>
-    </ngx-charts-chart>
+    </ngx-charts-chart-ext>
   `,
   styleUrls: ['./line-chart-ext.component.scss'],
   encapsulation: ViewEncapsulation.None,
@@ -163,5 +163,68 @@ export class LineChartExtComponent extends LineChartComponent {
   //TODO
   @Input() xinfos;
   @Input() pinfos;
+
+  hiddenSeries: Set<String> = new Set<String>();
+  resultsAll: any = [];
+
+  ngAfterViewInit(): void {
+    
+  }
+
+  onClick(data, series?): void {
+    if (series) {
+      data.series = series.name;
+    }
+
+    this.select.emit(data);
+
+    //hide or display series
+    if(this.resultsAll.length <= 0){
+      this.resultsAll = deepCopy(this.results);
+    }
+    
+    if(this.hiddenSeries.has(data)){
+      this.hiddenSeries.delete(data);
+    }else{
+      this.hiddenSeries.add(data);
+    }
+    this.results = this.resultsAll.filter(rlt => !this.hiddenSeries.has(rlt.name));
+    console.log(this.results);
+
+  }
   
+}
+
+function deepCopy(obj) {
+  var copy;
+
+  // Handle the 3 simple types, and null or undefined
+  if (null == obj || "object" != typeof obj) return obj;
+
+  // Handle Date
+  if (obj instanceof Date) {
+      copy = new Date();
+      copy.setTime(obj.getTime());
+      return copy;
+  }
+
+  // Handle Array
+  if (obj instanceof Array) {
+      copy = [];
+      for (var i = 0, len = obj.length; i < len; i++) {
+          copy[i] = deepCopy(obj[i]);
+      }
+      return copy;
+  }
+
+  // Handle Object
+  if (obj instanceof Object) {
+      copy = {};
+      for (var attr in obj) {
+          if (obj.hasOwnProperty(attr)) copy[attr] = deepCopy(obj[attr]);
+      }
+      return copy;
+  }
+
+  throw new Error("Unable to copy obj! Its type isn't supported.");
 }

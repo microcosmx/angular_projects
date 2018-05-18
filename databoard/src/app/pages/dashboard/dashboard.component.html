@@ -1,21 +1,22 @@
+
+
 <div class="row">
   <div class="col-xxxl-6 col-md-6">
-    <!--button (click)="getSelectedRows()">Get Selected Rows</button-->
-    <ag-grid-angular 
-        #agGrid
-        style="width: 100%; height: 560px;" 
-        class="ag-theme-balham"
-        [enableSorting]="true"
-        [enableFilter]="true"
-        [rowData]="rowData | async" 
-        [columnDefs]="columnDefs"
-        rowSelection="multiple"
-        >
-    </ag-grid-angular>
+    <nb-card size="large">
+      <nb-card-header>Cost Changes</nb-card-header>
+      <nb-card-body>
+        <ngx-cost></ngx-cost>
+      </nb-card-body>
+    </nb-card>
   </div>
 
   <div class="col-xxxl-6 col-md-6">
-    <ngx-electricity></ngx-electricity>
+    <nb-card size="large">
+      <nb-card-header>Competitor Changes</nb-card-header>
+      <nb-card-body>
+        <ngx-comp></ngx-comp>
+      </nb-card-body>
+    </nb-card>
   </div>
 </div>
 

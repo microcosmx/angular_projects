@@ -21,6 +21,8 @@ import { PlayerComponent } from './rooms/player/player.component';
 import { TrafficComponent } from './traffic/traffic.component';
 import { TrafficChartComponent } from './traffic/traffic-chart.component';
 
+import { CostComponent } from './costgrid/cost.component';
+import { CompComponent } from './compgrid/comp.component';
 import { ChartsModule } from '../charts/charts.module';
 
 import { AgGridModule } from 'ag-grid-angular';
@@ -51,6 +53,8 @@ import { AgGridModule } from 'ag-grid-angular';
     SolarComponent,
     TrafficComponent,
     TrafficChartComponent,
+    CostComponent,
+    CompComponent,
   ],
 })
 export class DashboardModule { }
