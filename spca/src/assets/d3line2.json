@@ -1,0 +1,277 @@
+{
+  "xinfos": [{
+    "reason": "optimized",
+    "name": "1001",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1002",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1003",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1004",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1005",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1006",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  },{
+    "reason": "optimized",
+    "name": "1011",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1012",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1013",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1014",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1015",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1016",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  },{
+    "reason": "optimized",
+    "name": "1021",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1022",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1023",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1024",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1025",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1026",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  },{
+    "reason": "optimized",
+    "name": "1031",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1032",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1033",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1034",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1035",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1036",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  },{
+    "reason": "optimized",
+    "name": "1041",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1042",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1043",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1044",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1045",
+    "date": "2018/3/6"
+  }, {
+    "reason": "optimized",
+    "name": "1046",
+    "runstate": "pass",
+    "date": "2018/3/6"
+  }],
+  
+  "series": [{
+    "name": "Cost",
+    "series": [
+      {
+        "name": "1001",
+        "value": 6
+      },
+      {
+        "name": "1002",
+        "value": 5
+      },
+      {
+        "name": "1003",
+        "value": 3
+      },
+      {
+        "name": "1004",
+        "value": 1
+      },
+      {
+        "name": "1005",
+        "value": 3
+      },
+      {
+        "name": "1006",
+        "value": 8
+      },
+      {
+        "name": "1011",
+        "value": 6
+      },
+      {
+        "name": "1012",
+        "value": 5
+      },
+      {
+        "name": "1013",
+        "value": 3
+      },
+      {
+        "name": "1014",
+        "value": 1
+      },
+      {
+        "name": "1015",
+        "value": 3
+      },
+      {
+        "name": "1016",
+        "value": 8
+      },
+      {
+        "name": "1021",
+        "value": 6
+      },
+      {
+        "name": "1022",
+        "value": 5
+      },
+      {
+        "name": "1023",
+        "value": 3
+      },
+      {
+        "name": "1024",
+        "value": 1
+      },
+      {
+        "name": "1025",
+        "value": 3
+      },
+      {
+        "name": "1026",
+        "value": 8
+      },
+      {
+        "name": "1031",
+        "value": 6
+      },
+      {
+        "name": "1032",
+        "value": 5
+      },
+      {
+        "name": "1033",
+        "value": 3
+      },
+      {
+        "name": "1034",
+        "value": 1
+      },
+      {
+        "name": "1035",
+        "value": 3
+      },
+      {
+        "name": "1036",
+        "value": 8
+      },
+      {
+        "name": "1041",
+        "value": 6
+      },
+      {
+        "name": "1042",
+        "value": 5
+      },
+      {
+        "name": "1043",
+        "value": 3
+      },
+      {
+        "name": "1044",
+        "value": 1
+      },
+      {
+        "name": "1045",
+        "value": 3
+      },
+      {
+        "name": "1046",
+        "value": 8
+      }
+    ]
+  }],
+  "pinfos": {
+    "Cost": {
+      "1002": [
+        {"name": "info0", "value": "value0"}
+      ],
+      "1004": [
+        {"name": "info1", "value": "value1"},
+        {"name": "info2", "value": "value2"},
+        {"name": "info3", "value": "value3"}
+      ]
+    }
+  }
+}
+

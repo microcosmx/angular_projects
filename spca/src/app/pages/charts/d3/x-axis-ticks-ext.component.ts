@@ -27,11 +27,11 @@ import {
           [attr.text-anchor]="textAnchor"
           [attr.transform]="textTransform"
           [style.font-size]="'12px'">
-          <tspan x="0" y="0">{{trimLabel(tickFormat(xtickInfos[tick].reason || tick))}}</tspan>
-          <tspan x="12" y="24">{{trimLabel(tickFormat(xtickInfos[tick].sid || tick))}}</tspan>
-          <tspan x="0" y="48">{{trimLabel(tickFormat(xtickInfos[tick].date || tick))}}</tspan>
+          <tspan x="0" y="0">{{trimLabel(tickFormat(xtickInfos[tick] && xtickInfos[tick].reason || tick))}}</tspan>
+          <tspan x="12" y="24">{{trimLabel(tickFormat(xtickInfos[tick] && xtickInfos[tick].sid || tick))}}</tspan>
+          <tspan x="0" y="48">{{trimLabel(tickFormat(xtickInfos[tick] && xtickInfos[tick].date || tick))}}</tspan>
         </text>
-        <svg:image *ngIf="xtickInfos[tick].runstate==='pass'" x="-30" y="8" width="24" height="24" xlink:href="assets/images/pass.png"></image>
+        <svg:image *ngIf="xtickInfos[tick] && xtickInfos[tick].runstate==='pass'" x="-30" y="8" width="24" height="24" xlink:href="assets/images/pass.png"></image>
       </svg:g>
     </svg:g>
 
@@ -54,14 +54,14 @@ export class XAxisTicksExtComponent extends XAxisTicksComponent {
 
   xtickInfos: any = {};
 
-  ngOnInit(): void {
-    setTimeout(() => this.updateDims());
-
+  ngOnChanges(changes: SimpleChanges): void {
     console.log(this.xinfos);
     for(let item of this.xinfos){
       this.xtickInfos[item.name] = item;
     }
     console.log(this.xtickInfos);
+
+    this.update();
   }
 
   // getTicks() {
