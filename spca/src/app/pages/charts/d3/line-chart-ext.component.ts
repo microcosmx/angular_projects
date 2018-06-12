@@ -192,6 +192,10 @@ export class LineChartExtComponent extends LineChartComponent {
     console.log(this.results);
 
   }
+
+  // getScaleType(values): string {
+  //   return 'linear';
+  // }
   
 }
 

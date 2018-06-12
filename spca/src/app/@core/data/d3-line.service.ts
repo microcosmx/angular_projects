@@ -12,30 +12,20 @@ export class D3LineService {
 
   data = {
     "xinfos": [{
+      "name": 1,
       "reason": "optimized",
-      "name": "1001",
+      "runid": "1001",
       "runstate": "pass",
       "date": "2018/3/6"
     }, {
+      "name": 2,
       "reason": "optimized",
-      "name": "1002",
+      "runid": "1002",
       "date": "2018/3/6"
     }, {
+      "name": 3,
       "reason": "optimized",
-      "name": "1003",
-      "runstate": "pass",
-      "date": "2018/3/6"
-    }, {
-      "reason": "optimized",
-      "name": "1004",
-      "date": "2018/3/6"
-    }, {
-      "reason": "optimized",
-      "name": "1005",
-      "date": "2018/3/6"
-    }, {
-      "reason": "optimized",
-      "name": "1006",
+      "runid": "1003",
       "runstate": "pass",
       "date": "2018/3/6"
     }],
@@ -43,40 +33,23 @@ export class D3LineService {
       "name": 'Cost',
       "series": [
         {
-          "name": "1001",
+          "name": 1,
           "value": 6
         },
         {
-          "name": "1002",
+          "name": 2,
           "value": 5
         },
         {
-          "name": "1003",
+          "name": 3,
           "value": 3
-        },
-        {
-          "name": "1004",
-          "value": 1
-        },
-        {
-          "name": "1005",
-          "value": 3
-        },
-        {
-          "name": "1006",
-          "value": 8
         }
       ]
     }],
     "pinfos": {
       "Cost": {
-        "1002": [
+        "2": [
           {"name": "info0", "value": "value0"}
-        ],
-        "1004": [
-          {"name": "info1", "value": "value1"},
-          {"name": "info2", "value": "value2"},
-          {"name": "info3", "value": "value3"}
         ]
       }
     }
@@ -84,7 +57,7 @@ export class D3LineService {
   };
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private d3lineUrl = 'assets/d3line.json';  // URL to web api
+  private d3lineUrl = 'assets/d3line2.json';  // URL to web api
 
   getD3Lines(): Promise<any> {
     return this.http.get(this.d3lineUrl)

@@ -27,9 +27,9 @@ import {
           [attr.text-anchor]="textAnchor"
           [attr.transform]="textTransform"
           [style.font-size]="'12px'">
-          <tspan x="0" y="0">{{trimLabel(tickFormat(xtickInfos[tick] && xtickInfos[tick].reason || tick))}}</tspan>
-          <tspan x="12" y="24">{{trimLabel(tickFormat(xtickInfos[tick] && xtickInfos[tick].sid || tick))}}</tspan>
-          <tspan x="0" y="48">{{trimLabel(tickFormat(xtickInfos[tick] && xtickInfos[tick].date || tick))}}</tspan>
+          <tspan x="0" y="0">{{xtickInfos[tick] && xtickInfos[tick].reason || ""}}</tspan>
+          <tspan x="12" y="24">{{xtickInfos[tick] && xtickInfos[tick].name || ""}}</tspan>
+          <tspan x="0" y="48">{{xtickInfos[tick] && xtickInfos[tick].date || ""}}</tspan>
         </text>
         <svg:image *ngIf="xtickInfos[tick] && xtickInfos[tick].runstate==='pass'" x="-30" y="8" width="24" height="24" xlink:href="assets/images/pass.png"></image>
       </svg:g>
@@ -66,7 +66,7 @@ export class XAxisTicksExtComponent extends XAxisTicksComponent {
 
   // getTicks() {
   //   let ticks;
-  //   const maxTicks = this.getMaxTicks(20);
+  //   const maxTicks = this.getMaxTicks(10);
   //   const maxScaleTicks = this.getMaxTicks(100);
 
   //   if (this.tickValues) {
@@ -82,3 +82,20 @@ export class XAxisTicksExtComponent extends XAxisTicksComponent {
   // }
 
 }
+
+
+// export function reduceTicks(ticks, maxTicks) {
+//   if (ticks.length > maxTicks) {
+//     const reduced = [];
+//     const modulus = Math.floor(ticks.length / maxTicks);
+//     for (let i = 0; i < ticks.length; i++) {
+//       if (i % modulus === 0) {
+//         reduced.push(ticks[i]);
+//       }
+//     }
+//     ticks = reduced;
+//   }
+
+//   return ticks;
+// }
+
