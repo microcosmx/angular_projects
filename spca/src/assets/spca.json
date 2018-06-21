@@ -1,12 +1,9 @@
 [{
-    "column1": {"name": "Scenario ID", "value":"111"},
-    "column2": {"name": "UPC", "value":"111"},
-    "column3": {"name": "Zone/Stores", "value":"333"}
-  }, {
     "column1": {"name": "Category", "value":"Coffee"},
-    "column2": {"name": "Product", "value":"666"}
+    "column2": {"name": "Product", "value":"666"},
+    "column3": {"name": "Zone", "value":"333"}
   }, {
     "column1": {"name": "Division", "value":"Chain"},
-    "column2": {"name": "Line Group", "value":"666"},
-    "column3": {"name": "Ref Competitor", "value":"666"}
+    "column2": {"name": "UPC", "value":"666"},
+    "column3": {"name": "Competitor", "value":"666"}
   }]

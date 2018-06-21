@@ -1,4 +1,8 @@
 {
+  "baseInfos": {
+    "scenarioId": "666",
+    "scenarioName": "runName"
+  },
   "xinfos": [{
     "name": 1,
     "reason": "optimized",
@@ -60,35 +64,6 @@
       {
         "name": 6,
         "value": 8
-      }
-    ]
-  },
-  {
-    "name": "Ref Cost",
-    "series": [
-      {
-        "name": 1,
-        "value": 3
-      },
-      {
-        "name": 2,
-        "value": 3
-      },
-      {
-        "name": 3,
-        "value": 6
-      },
-      {
-        "name": 4,
-        "value":7
-      },
-      {
-        "name": 5,
-        "value": 8
-      },
-      {
-        "name": 6,
-        "value": 7
       }
     ]
   },

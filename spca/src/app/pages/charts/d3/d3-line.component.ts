@@ -55,6 +55,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
         this.multi = data.series;
         this.xinfos = data.xinfos;
         this.pinfos = data.pinfos;
+        this.xAxisLabel = `${data.baseInfos.scenarioId}/${data.baseInfos.scenarioName}`;
       });
   }
 

@@ -57,7 +57,7 @@ export class D3LineService {
   };
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private d3lineUrl = 'assets/d3line2.json';  // URL to web api
+  private d3lineUrl = 'assets/d3line.json';  // URL to web api
 
   getD3Lines(): Promise<any> {
     return this.http.get(this.d3lineUrl)
