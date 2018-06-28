@@ -4,6 +4,7 @@ import { Component, OnDestroy, OnInit, ViewChild, AfterViewInit, EventEmitter, I
 import { NbThemeService } from '@nebular/theme';
 
 import { D3LineService } from '../../../@core/data/d3-line.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'ngx-d3-line',
@@ -36,7 +37,11 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @Output() onSelectAction = new EventEmitter<boolean>();
 
-  constructor(private theme: NbThemeService, private service: D3LineService) {
+  constructor(
+    private theme: NbThemeService, 
+    private service: D3LineService,
+    private translate: TranslateService
+  ) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
       const colors: any = config.variables;
       this.colorScheme = {
@@ -44,18 +49,22 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
       };
     });
 
-    this.multi = this.service.data.series;
-    this.xinfos = this.service.data.xinfos;
-    this.pinfos = this.service.data.pinfos;
+    this.translate.get('spcaChart.yAxisLabel').subscribe((res: string) => {
+      this.yAxisLabel = res;
+    });
+
+    this.multi = this.service.data.result.series;
+    this.xinfos = this.service.data.result.xinfos;
+    this.pinfos = this.service.data.result.pinfos;
   }
 
   ngOnInit(): void {
     this.service.getD3Lines()
       .then(data => {
-        this.multi = data.series;
-        this.xinfos = data.xinfos;
-        this.pinfos = data.pinfos;
-        this.xAxisLabel = `${data.baseInfos.scenarioId}/${data.baseInfos.scenarioName}`;
+        this.multi = data.result.series;
+        this.xinfos = data.result.xinfos;
+        this.pinfos = data.result.pinfos;
+        this.xAxisLabel = `${data.result.baseInfos.scenarioId}/${data.result.baseInfos.scenarioName}`;
       });
   }
 

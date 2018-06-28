@@ -1,294 +1,296 @@
 {
-  "baseInfos": {
-    "scenarioId": "666",
-    "scenarioName": "runName"
-  },
-  "xinfos": [{
-    "name": 1,
-    "reason": "optimized",
-    "runid": "1001",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 2,
-    "reason": "optimized",
-    "runid": "1002",
-    "date": "2018/3/6"
-  }, {
-    "name": 3,
-    "reason": "optimized",
-    "runid": "1003",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 4,
-    "reason": "optimized",
-    "runid": "1004",
-    "date": "2018/3/6"
-  }, {
-    "name": 5,
-    "reason": "optimized",
-    "runid": "1005",
-    "date": "2018/3/6"
-  }, {
-    "name": 6,
-    "reason": "optimized",
-    "runid": "1006",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  },{
-    "name": 7,
-    "reason": "optimized",
-    "runid": "1011",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 8,
-    "reason": "optimized",
-    "runid": "1012",
-    "date": "2018/3/6"
-  }, {
-    "name": 9,
-    "reason": "optimized",
-    "runid": "1013",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 10,
-    "reason": "optimized",
-    "runid": "1014",
-    "date": "2018/3/6"
-  }, {
-    "name": 11,
-    "reason": "optimized",
-    "runid": "1015",
-    "date": "2018/3/6"
-  }, {
-    "name": 12,
-    "reason": "optimized",
-    "runid": "1016",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  },{
-    "name": 13,
-    "reason": "optimized",
-    "runid": "1021",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 14,
-    "reason": "optimized",
-    "runid": "1022",
-    "date": "2018/3/6"
-  }, {
-    "name": 15,
-    "reason": "optimized",
-    "runid": "1023",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 16,
-    "reason": "optimized",
-    "runid": "1024",
-    "date": "2018/3/6"
-  }, {
-    "name": 17,
-    "reason": "optimized",
-    "runid": "1025",
-    "date": "2018/3/6"
-  }, {
-    "name": 18,
-    "reason": "optimized",
-    "runid": "1026",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  },{
-    "name": 19,
-    "reason": "optimized",
-    "runid": "1031",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 20,
-    "reason": "optimized",
-    "runid": "1032",
-    "date": "2018/3/6"
-  }, {
-    "name": 21,
-    "reason": "optimized",
-    "runid": "1033",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 22,
-    "reason": "optimized",
-    "runid": "1034",
-    "date": "2018/3/6"
-  }, {
-    "name": 23,
-    "reason": "optimized",
-    "runid": "1035",
-    "date": "2018/3/6"
-  }, {
-    "name": 24,
-    "reason": "optimized",
-    "runid": "1036",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  },{
-    "name": 25,
-    "reason": "optimized",
-    "runid": "1041",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 26,
-    "reason": "optimized",
-    "runid": "1042",
-    "date": "2018/3/6"
-  }, {
-    "name": 27,
-    "reason": "optimized",
-    "runid": "1043",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }, {
-    "name": 28,
-    "reason": "optimized",
-    "runid": "1044",
-    "date": "2018/3/6"
-  }, {
-    "name": 29,
-    "reason": "optimized",
-    "runid": "1045",
-    "date": "2018/3/6"
-  }, {
-    "name": 30,
-    "reason": "optimized",
-    "runid": "1046",
-    "runstate": "pass",
-    "date": "2018/3/6"
-  }],
-  
-  "series": [{
-    "name": "Cost",
-    "series": [
-      {
-        "name": 1,
-        "value": 6
-      },
-      {
-        "name": 2,
-        "value": null
-      },
-      {
-        "name": 3,
-        "value": 3
-      },
-      {
-        "name": 4,
-        "value": 1
-      },
-      {
-        "name": 5,
-        "value": 3
-      },
-      {
-        "name": 6,
-        "value": 8
-      },
-      {
-        "name": 11,
-        "value": 3
-      },
-      {
-        "name": 12,
-        "value": 8
-      },
-      {
-        "name": 13,
-        "value": 6
-      },
-      {
-        "name": 14,
-        "value": 5
-      },
-      {
-        "name": 15,
-        "value": 3
-      },
-      {
-        "name": 16,
-        "value": 1
-      },
-      {
-        "name": 17,
-        "value": 3
-      },
-      {
-        "name": 18,
-        "value": 8
-      },
-      {
-        "name": 19,
-        "value": 6
-      },
-      {
-        "name": 20,
-        "value": 5
-      },
-      {
-        "name": 21,
-        "value": 3
-      },
-      {
-        "name": 22,
-        "value": 1
-      },
-      {
-        "name": 23,
-        "value": 3
-      },
-      {
-        "name": 24,
-        "value": 8
-      },
-      {
-        "name": 25,
-        "value": 6
-      },
-      {
-        "name": 26,
-        "value": 5
-      },
-      {
-        "name": 27,
-        "value": 3
-      },
-      {
-        "name": 28,
-        "value": 1
-      },
-      {
-        "name": 29,
-        "value": 3
-      },
-      {
-        "name": 30,
-        "value": 8
-      }
-    ]
-  }],
-  "pinfos": {
-    "Cost": {
-      "2": [
-        {"name": "info0", "value": "value0"}
-      ],
-      "4": [
-        {"name": "info1", "value": "value1"},
-        {"name": "info2", "value": "value2"},
-        {"name": "info3", "value": "value3"}
+  "result": {
+    "baseInfos": {
+      "scenarioId": "666",
+      "scenarioName": "runName"
+    },
+    "xinfos": [{
+      "name": 1,
+      "reason": "optimized",
+      "runid": "1001",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 2,
+      "reason": "optimized",
+      "runid": "1002",
+      "date": "2018/3/6"
+    }, {
+      "name": 3,
+      "reason": "optimized",
+      "runid": "1003",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 4,
+      "reason": "optimized",
+      "runid": "1004",
+      "date": "2018/3/6"
+    }, {
+      "name": 5,
+      "reason": "optimized",
+      "runid": "1005",
+      "date": "2018/3/6"
+    }, {
+      "name": 6,
+      "reason": "optimized",
+      "runid": "1006",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    },{
+      "name": 7,
+      "reason": "optimized",
+      "runid": "1011",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 8,
+      "reason": "optimized",
+      "runid": "1012",
+      "date": "2018/3/6"
+    }, {
+      "name": 9,
+      "reason": "optimized",
+      "runid": "1013",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 10,
+      "reason": "optimized",
+      "runid": "1014",
+      "date": "2018/3/6"
+    }, {
+      "name": 11,
+      "reason": "optimized",
+      "runid": "1015",
+      "date": "2018/3/6"
+    }, {
+      "name": 12,
+      "reason": "optimized",
+      "runid": "1016",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    },{
+      "name": 13,
+      "reason": "optimized",
+      "runid": "1021",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 14,
+      "reason": "optimized",
+      "runid": "1022",
+      "date": "2018/3/6"
+    }, {
+      "name": 15,
+      "reason": "optimized",
+      "runid": "1023",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 16,
+      "reason": "optimized",
+      "runid": "1024",
+      "date": "2018/3/6"
+    }, {
+      "name": 17,
+      "reason": "optimized",
+      "runid": "1025",
+      "date": "2018/3/6"
+    }, {
+      "name": 18,
+      "reason": "optimized",
+      "runid": "1026",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    },{
+      "name": 19,
+      "reason": "optimized",
+      "runid": "1031",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 20,
+      "reason": "optimized",
+      "runid": "1032",
+      "date": "2018/3/6"
+    }, {
+      "name": 21,
+      "reason": "optimized",
+      "runid": "1033",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 22,
+      "reason": "optimized",
+      "runid": "1034",
+      "date": "2018/3/6"
+    }, {
+      "name": 23,
+      "reason": "optimized",
+      "runid": "1035",
+      "date": "2018/3/6"
+    }, {
+      "name": 24,
+      "reason": "optimized",
+      "runid": "1036",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    },{
+      "name": 25,
+      "reason": "optimized",
+      "runid": "1041",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 26,
+      "reason": "optimized",
+      "runid": "1042",
+      "date": "2018/3/6"
+    }, {
+      "name": 27,
+      "reason": "optimized",
+      "runid": "1043",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }, {
+      "name": 28,
+      "reason": "optimized",
+      "runid": "1044",
+      "date": "2018/3/6"
+    }, {
+      "name": 29,
+      "reason": "optimized",
+      "runid": "1045",
+      "date": "2018/3/6"
+    }, {
+      "name": 30,
+      "reason": "optimized",
+      "runid": "1046",
+      "runstate": "pass",
+      "date": "2018/3/6"
+    }],
+    
+    "series": [{
+      "name": "Cost",
+      "series": [
+        {
+          "name": 1,
+          "value": 6
+        },
+        {
+          "name": 2,
+          "value": null
+        },
+        {
+          "name": 3,
+          "value": 3
+        },
+        {
+          "name": 4,
+          "value": 1
+        },
+        {
+          "name": 5,
+          "value": 3
+        },
+        {
+          "name": 6,
+          "value": 8
+        },
+        {
+          "name": 11,
+          "value": 3
+        },
+        {
+          "name": 12,
+          "value": 8
+        },
+        {
+          "name": 13,
+          "value": 6
+        },
+        {
+          "name": 14,
+          "value": 5
+        },
+        {
+          "name": 15,
+          "value": 3
+        },
+        {
+          "name": 16,
+          "value": 1
+        },
+        {
+          "name": 17,
+          "value": 3
+        },
+        {
+          "name": 18,
+          "value": 8
+        },
+        {
+          "name": 19,
+          "value": 6
+        },
+        {
+          "name": 20,
+          "value": 5
+        },
+        {
+          "name": 21,
+          "value": 3
+        },
+        {
+          "name": 22,
+          "value": 1
+        },
+        {
+          "name": 23,
+          "value": 3
+        },
+        {
+          "name": 24,
+          "value": 8
+        },
+        {
+          "name": 25,
+          "value": 6
+        },
+        {
+          "name": 26,
+          "value": 5
+        },
+        {
+          "name": 27,
+          "value": 3
+        },
+        {
+          "name": 28,
+          "value": 1
+        },
+        {
+          "name": 29,
+          "value": 3
+        },
+        {
+          "name": 30,
+          "value": 8
+        }
       ]
+    }],
+    "pinfos": {
+      "Cost": {
+        "2": [
+          {"name": "info0", "value": "value0"}
+        ],
+        "4": [
+          {"name": "info1", "value": "value1"},
+          {"name": "info2", "value": "value2"},
+          {"name": "info3", "value": "value3"}
+        ]
+      }
     }
   }
 }

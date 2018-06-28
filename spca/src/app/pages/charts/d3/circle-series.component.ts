@@ -96,7 +96,7 @@ export class CircleSeriesExtComponent extends CircleSeriesComponent {
     // `;
     // console.log(this.circle.data);
     let extraData = this.pinfos && this.pinfos[this.circle.data.series] && this.pinfos[this.circle.data.series][this.circle.data.name];
-    this.translate.get('empty_message').subscribe((res: string) => {
+    this.translate.get('emptyMessage').subscribe((res: string) => {
       this.emptyMessage = res;
     });
     let resultString = '<span class="tooltip-label">Extra Informations:</span>';

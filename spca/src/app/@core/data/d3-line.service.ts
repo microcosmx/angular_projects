@@ -11,49 +11,50 @@ export class D3LineService {
   constructor(private http: Http) { }
 
   data = {
-    "xinfos": [{
-      "name": 1,
-      "reason": "optimized",
-      "runid": "1001",
-      "runstate": "pass",
-      "date": "2018/3/6"
-    }, {
-      "name": 2,
-      "reason": "optimized",
-      "runid": "1002",
-      "date": "2018/3/6"
-    }, {
-      "name": 3,
-      "reason": "optimized",
-      "runid": "1003",
-      "runstate": "pass",
-      "date": "2018/3/6"
-    }],
-    "series": [{
-      "name": 'Cost',
-      "series": [
-        {
-          "name": 1,
-          "value": 6
-        },
-        {
-          "name": 2,
-          "value": 5
-        },
-        {
-          "name": 3,
-          "value": 3
-        }
-      ]
-    }],
-    "pinfos": {
-      "Cost": {
-        "2": [
-          {"name": "info0", "value": "value0"}
+    "result": {
+      "xinfos": [{
+        "name": 1,
+        "reason": "optimized",
+        "runid": "1001",
+        "runstate": "pass",
+        "date": "2018/3/6"
+      }, {
+        "name": 2,
+        "reason": "optimized",
+        "runid": "1002",
+        "date": "2018/3/6"
+      }, {
+        "name": 3,
+        "reason": "optimized",
+        "runid": "1003",
+        "runstate": "pass",
+        "date": "2018/3/6"
+      }],
+      "series": [{
+        "name": 'Cost',
+        "series": [
+          {
+            "name": 1,
+            "value": 6
+          },
+          {
+            "name": 2,
+            "value": 5
+          },
+          {
+            "name": 3,
+            "value": 3
+          }
         ]
+      }],
+      "pinfos": {
+        "Cost": {
+          "2": [
+            {"name": "info0", "value": "value0"}
+          ]
+        }
       }
     }
-  
   };
 
   private headers = new Headers({'Content-Type': 'application/json'});
