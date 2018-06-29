@@ -166,30 +166,35 @@ export class LineChartExtComponent extends LineChartComponent {
 
   hiddenSeries: Set<String> = new Set<String>();
   resultsAll: any = [];
+  xtickInfos: any = {};
 
   ngAfterViewInit(): void {
     
   }
 
   onClick(data, series?): void {
-    if (series) {
+    if (series) { // legend click
       data.series = series.name;
+      for(let item of this.xinfos){
+        this.xtickInfos[item.name] = item;
+      }
+      data.extraInfo = this.xtickInfos[data.name]
+    }else{ //circle click
+      //hide or display series
+      if(this.resultsAll.length <= 0){
+        this.resultsAll = deepCopy(this.results);
+      }
+      
+      if(this.hiddenSeries.has(data)){
+        this.hiddenSeries.delete(data);
+      }else{
+        this.hiddenSeries.add(data);
+      }
+      this.results = this.resultsAll.filter(rlt => !this.hiddenSeries.has(rlt.name));
+      console.log(this.results);
     }
 
     this.select.emit(data);
-
-    //hide or display series
-    if(this.resultsAll.length <= 0){
-      this.resultsAll = deepCopy(this.results);
-    }
-    
-    if(this.hiddenSeries.has(data)){
-      this.hiddenSeries.delete(data);
-    }else{
-      this.hiddenSeries.add(data);
-    }
-    this.results = this.resultsAll.filter(rlt => !this.hiddenSeries.has(rlt.name));
-    console.log(this.results);
 
   }
 

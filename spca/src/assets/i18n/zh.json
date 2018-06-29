@@ -7,4 +7,6 @@
     "spcaChart": {
         "yAxisLabel": "价格"
     }
+    "rbvTab": "价格变动规则",
+    "spcaTab": "价格变化分析"
 }

@@ -8,6 +8,8 @@ import { DynamicTabsDirective } from './dynamic-tabs.directive';
 import { ChartsModule } from '../charts/charts.module';
 import { TablesModule } from '../tables/tables.module';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 
 const components = [
   DashboardComponent,
@@ -23,6 +25,7 @@ const components = [
     ThemeModule,
     ChartsModule,
     TablesModule,
+    TranslateModule.forChild(),
   ],
   declarations: [
     ...components,

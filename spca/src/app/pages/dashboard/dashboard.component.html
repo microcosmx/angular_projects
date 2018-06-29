@@ -1,5 +1,5 @@
 <nb-tabset-ext>
-  <nb-tab-ext tabTitle="Price Change History">
+  <nb-tab-ext tabTitle="{{'spcaTab' | translate}}">
     <div class="row">
       <div class="col-lg-12">
         <nb-card>
@@ -13,13 +13,13 @@
       <div class="col-lg-12">
         <nb-card>
           <nb-card-body>
-            <ngx-d3-line (onSelectAction)="onSelectAction($event)"></ngx-d3-line>
+            <ngx-d3-line (onSelectAction)="onSelectActionClick($event)"></ngx-d3-line>
           </nb-card-body>
         </nb-card>
       </div>
     </div>
   </nb-tab-ext>
-  <nb-tab-ext tabTitle="RBV">
+  <nb-tab-ext tabTitle="{{'rbvTab' | translate}}">
     <div class="row">
       <div class="col-lg-12">
         <nb-card>

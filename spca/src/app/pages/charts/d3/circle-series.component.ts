@@ -20,7 +20,7 @@ import {
   CircleSeriesComponent
  } from '@swimlane/ngx-charts';
 
- import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'g[ngx-charts-circle-series-ext]',

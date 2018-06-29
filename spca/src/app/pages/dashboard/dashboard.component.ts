@@ -18,6 +18,9 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // items: any = ["RBV0"];
 
+  constructor() {
+  }
+
   ngOnInit(): void {
   }
 
@@ -27,16 +30,16 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
   }
 
-  onSelectAction(scenarioId: any): void{
+  onSelectActionClick(info: any): void{
     // this.items.push(`New Added RBV of ${scenarioId}`);
-    this.openTab(scenarioId);
+    this.openTab(info);
   }
 
-  openTab(scenarioId: string) {
+  openTab(info: any) {
     this.tabsComponent.openTab(
-      `RBV-${scenarioId}`,
+      `RBV-${info.runid}`,
       this.rbvContentTemplate,
-      `RBV Content of ${scenarioId}`,
+      `RBV Content of ${info.runid}`,
       true
     );
   }

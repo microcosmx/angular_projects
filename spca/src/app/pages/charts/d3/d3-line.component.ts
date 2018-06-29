@@ -79,7 +79,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   onSelect(event): void{
     console.log(event);
     if(typeof event === "object"){
-      this.onSelectAction.emit(event.name);
+      this.onSelectAction.emit(event.extraInfo);
     }
   }
 
