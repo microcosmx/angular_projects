@@ -1,0 +1,37 @@
+{
+  "/dt/*": {
+    "target": "https://localhost",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/dt": ""
+    }
+  },
+  "/dtrepo": {
+    "target": "http://dtrepo.devlab.ibm.com",
+    "secure": "false",
+    "pathRewrite": {
+      "^/dtrepo": ""
+    }
+  },
+  "/angular": {
+    "target": {
+      "host": "github.com",
+      "protocol": "https:",
+      "port": 443
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info"
+  },
+  "/proxy/*": {
+    "target": "https://www.baidu.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/proxy": ""
+    }
+  }
+}

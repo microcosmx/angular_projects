@@ -1,5 +1,10 @@
 
 
+ssl:
+npm config set strict-ssl true
+npm config set cafile ../ssl/demandtec.cert
+sudo npm config set -g cafile ../ssl/demandtec.cert
+
 help:
 ng help
 ng new PROJECT-NAME

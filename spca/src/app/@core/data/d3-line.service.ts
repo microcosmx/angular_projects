@@ -8,7 +8,17 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class D3LineService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) { 
+    // let testServerURL = "/dt/demandtec/price/api/run/DTMetricsContent?runId=41&dojo.preventCache=1530872517470";
+    // this.http.get(testServerURL)
+    //         .toPromise()
+    //         .then(response => {
+    //           console.log("-------ssl server verify--------");
+    //           console.log(response);
+    //           // console.log(response._body);
+    //         })
+    //         .catch(this.handleError);
+  }
 
   data = {
     "result": {
@@ -64,7 +74,7 @@ export class D3LineService {
     return this.http.get(this.d3lineUrl)
                .toPromise()
                .then(response => {
-                  // console.log(response.json());
+                  console.log(response.json());
                   return response.json();
                 })
                .catch(this.handleError);

@@ -13,6 +13,8 @@
     "ng": "ng",
     "conventional-changelog": "conventional-changelog",
     "start": "ng serve",
+    "proxy": "ng serve --proxy proxy.config.json",
+    "proxy:ssl": "ng serve --proxy proxy.config.json --ssl 1 --ssl-key ../ssl/demandtec.key --ssl-cert ../ssl/demandtec.cert",
     "build": "ng build",
     "build:prod": "npm run build -- --prod --aot",
     "test": "ng test -sr",
