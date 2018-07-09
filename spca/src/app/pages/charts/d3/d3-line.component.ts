@@ -66,6 +66,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
         this.xinfos = data.result.xinfos;
         this.pinfos = data.result.pinfos;
         this.xAxisLabel = `${data.result.baseInfos.scenarioId}/${data.result.baseInfos.scenarioName}`;
+        //resize chart view based on the window size
         window.dispatchEvent(new Event('resize'));
       });
   }

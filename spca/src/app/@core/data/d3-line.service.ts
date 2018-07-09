@@ -74,7 +74,7 @@ export class D3LineService {
     return this.http.get(this.d3lineUrl)
                .toPromise()
                .then(response => {
-                  console.log(response.json());
+                  // console.log(response.json());
                   return response.json();
                 })
                .catch(this.handleError);
