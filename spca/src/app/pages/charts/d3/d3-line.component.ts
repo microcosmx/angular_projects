@@ -16,6 +16,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   multi = [];
   xinfos = [];
   pinfos = {};
+  view = [];
 
   showLegend = true;
   showXAxis = true;
@@ -65,6 +66,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
         this.xinfos = data.result.xinfos;
         this.pinfos = data.result.pinfos;
         this.xAxisLabel = `${data.result.baseInfos.scenarioId}/${data.result.baseInfos.scenarioName}`;
+        window.dispatchEvent(new Event('resize'));
       });
   }
 
@@ -81,6 +83,11 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
     if(typeof event === "object"){
       this.onSelectAction.emit(event.extraInfo);
     }
+  }
+
+  // [view]="view"
+  onResize(event) { 
+    this.view = [event.target.innerWidth - 200, 460 ]; 
   }
 
 }

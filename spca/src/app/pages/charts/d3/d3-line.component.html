@@ -1,6 +1,7 @@
 
 
 <ngx-charts-line-chart-ext
+  [view]="view"
   [scheme]="colorScheme"
   [results]="multi"
   [xinfos]="xinfos"
@@ -14,7 +15,11 @@
   [yAxisLabel]="yAxisLabel"
   [timeline]="xinfos.length > 12 ? true : false"
   (select)="onSelect($event)"
+  (window:resize)="onResize($event)"
 >
+
+  <!-- [xAxisTickFormatting]="xAxisTickFormatting" -->
+  <!-- (window:resize)="onResize($event)" -->
   <!-- <ng-template #tooltipTemplate let-model="model">
     <h1>
       xxx
@@ -29,4 +34,6 @@
   </ng-template> -->
 
 </ngx-charts-line-chart-ext>
-<!-- [xAxisTickFormatting]="xAxisTickFormatting" -->
+
+
+
