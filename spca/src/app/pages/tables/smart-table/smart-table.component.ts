@@ -49,14 +49,14 @@ export class SmartTableComponent implements OnInit, AfterViewInit {
 
   constructor(private service: SmartTableService) {
     const data = this.service.getData();
-    this.source.load(data);
+    this.source.load(data.result);
   }
 
 
   ngOnInit(): void {
     this.service.getSpcas()
       .then(data => {
-        this.source.load(data);
+        this.source.load(data.result);
       });
   }
 

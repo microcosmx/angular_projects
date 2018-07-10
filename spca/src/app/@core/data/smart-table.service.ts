@@ -10,18 +10,15 @@ export class SmartTableService {
 
   constructor(private http: Http) { }
 
-  data = [{
-    "column1": "Scenario ID: xxx",
-    "column2": "Product: xxx",
-    "column3": "Ref Competitor: xxx",
+  data = {"result": [{
+    "column1": {"name": "Category", "value":"Coffee"},
+    "column2": {"name": "Product", "value":"666"},
+    "column3": {"name": "Zone", "value":"333"}
   }, {
-    "column1": "Category: xxx",
-    "column2": "Zone/Stores: xxx",
-    "column3": "Ref Cost Type: xxx",
-  }, {
-    "column1": "Division: xxx",
-    "column2": "Line Group: xxx",
-  }];
+    "column1": {"name": "Division", "value":"Chain"},
+    "column2": {"name": "UPC", "value":"666"},
+    "column3": {"name": "Competitor", "value":"666"}
+  }]};
 
   getData() {
     return this.data;
