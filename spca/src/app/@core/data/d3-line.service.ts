@@ -69,13 +69,16 @@ export class D3LineService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
   private d3lineUrl = 'assets/d3line.json';  // URL to web api
+  // https://localhost/demandtec/price/api/spcha/spchachart?runId=3&resultId=1&fromSkuZone=1
+  // private d3lineUrl = "/dt/demandtec/price/api/spcha/spchachart?runId=3&resultId=1&fromSkuZone=1"
 
   getD3Lines(): Promise<any> {
     return this.http.get(this.d3lineUrl)
                .toPromise()
                .then(response => {
                   // console.log(response.json());
-                  return response.json();
+                  // return response.json();
+                  return response;
                 })
                .catch(this.handleError);
   }

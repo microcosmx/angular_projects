@@ -72,7 +72,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-
+    window.dispatchEvent(new Event('resize'));
   }
 
   ngOnDestroy(): void {

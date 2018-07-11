@@ -26,13 +26,16 @@ export class SmartTableService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
   private spcaUrl = 'assets/spca.json';  // URL to web api
+  // https://localhost/demandtec/price/api/spcha/spchainfo?runId=3&resultId=1&fromSkuZone=1
+  // private spcaUrl = "/dt/demandtec/price/api/spcha/spchainfo?runId=3&resultId=1&fromSkuZone=1"
 
   getSpcas(): Promise<any> {
     return this.http.get(this.spcaUrl)
                .toPromise()
                .then(response => {
                   // console.log(response.json());
-                  return response.json();
+                  // return response.json();
+                  return response;
                 })
                .catch(this.handleError);
   }
