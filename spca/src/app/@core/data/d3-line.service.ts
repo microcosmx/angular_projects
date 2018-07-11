@@ -77,8 +77,8 @@ export class D3LineService {
                .toPromise()
                .then(response => {
                   // console.log(response.json());
-                  // return response.json();
-                  return response;
+                  return response.json();
+                  // return response;
                 })
                .catch(this.handleError);
   }

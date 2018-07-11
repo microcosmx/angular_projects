@@ -7,6 +7,10 @@
     flex: 0.15 !important;
   }
 
+  nb-layout-column.main-content{
+    padding:0 !important;
+  }
+
   nb-sidebar.settings-sidebar {
     $sidebar-width: 7.5rem;
 
