@@ -15,7 +15,7 @@
     "start": "ng serve",
     "proxy": "ng serve --proxy proxy.config.json",
     "proxy:ssl": "ng serve --proxy proxy.config.json --ssl 1 --ssl-key ../ssl/demandtec.key --ssl-cert ../ssl/demandtec.cert",
-    "build": "ng build",
+    "build": "ng build --prod --aot",
     "build:prod": "npm run build -- --prod --aot",
     "test": "ng test -sr",
     "test:coverage": "rimraf coverage && npm run test -- -cc",
