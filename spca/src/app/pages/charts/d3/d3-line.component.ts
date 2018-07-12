@@ -65,7 +65,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
         this.multi = data.result.series;
         this.xinfos = data.result.xinfos;
         this.pinfos = data.result.pinfos;
-        this.xAxisLabel = `${data.result.baseInfos.scenarioId}/${data.result.baseInfos.scenarioName}`;
+        this.xAxisLabel = `ScenarioID: ${data.result.baseInfos.scenarioId}/${data.result.baseInfos.scenarioName}`;
         //resize chart view based on the window size
         window.dispatchEvent(new Event('resize'));
       });
@@ -88,7 +88,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // [view]="view"
   onResize(event) { 
-    this.view = [event.target.innerWidth - 60, 460 ]; 
+    this.view = [event.target.innerWidth - 60, 360 ]; 
   }
 
 }

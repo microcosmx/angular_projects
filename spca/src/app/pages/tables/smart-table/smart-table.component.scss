@@ -8,9 +8,16 @@ nb-card {
 @import '../../../@theme/styles/themes';
 
 @include nb-install-component() {
-  ng2-smart-table table tr {
-    th, td{
-      border: medium none;
+  ng2-smart-table /deep/ table 
+  {
+    thead{
+      display: none;
+    }
+    tr {
+      th, td{
+        border: medium none;
+        font-size: 0.9rem;
+      }
     }
   }
 }
