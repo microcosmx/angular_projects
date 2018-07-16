@@ -17,7 +17,15 @@ nb-card {
     tr {
       th, td{
         border: medium none;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        text-align: left;
+        // width: 33%;
+
+        // word-break: break-all;
+        // white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        // max-width: 300px;
       }
     }
   }

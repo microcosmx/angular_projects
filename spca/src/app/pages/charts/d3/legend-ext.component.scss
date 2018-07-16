@@ -72,7 +72,8 @@
     width: calc(100% - 20px);
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    // overflow: hidden;
+    overflow: visible;
   }
 
   .legend-title-text {
@@ -82,5 +83,6 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    display: none;
   }
 }
