@@ -10,6 +10,7 @@ nb-card {
 @include nb-install-component() {
   ng2-smart-table /deep/ table 
   {
+    margin: 0;
     thead{
       display: none;
     }
