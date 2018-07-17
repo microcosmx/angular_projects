@@ -55,4 +55,14 @@ export class XAxisExtComponent extends XAxisComponent {
     console.log(this.xinfos);
   }
 
+  emitTicksHeight({ height }): void {
+    const newLabelOffset = height + 25 + 5 + 10;
+    if (newLabelOffset !== this.labelOffset) {
+      this.labelOffset = newLabelOffset;
+      setTimeout(() => {
+        this.dimensionsChanged.emit({height});
+      }, 0);
+    }
+  }
+
 }

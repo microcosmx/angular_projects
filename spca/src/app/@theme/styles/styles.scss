@@ -31,7 +31,8 @@
         nb-theme(scrollbar-width));
 
     ul {
-      font-family: nb-theme(tabs-font-family);
+      // font-family: nb-theme(tabs-font-family);
+      font-family: Arial;
       font-size: nb-theme(tabs-font-size);
 
       padding: 0 nb-theme(tabs-padding);
@@ -71,7 +72,8 @@
     }
 
     nb-tab-ext {
-      font-family: nb-theme(tabs-content-font-family);
+      // font-family: nb-theme(tabs-content-font-family);
+      font-family: Arial;
       font-size: nb-theme(tabs-content-font-size);
       color: nb-theme(tabs-fg-text);
       background-color: nb-theme(tabs-bg);

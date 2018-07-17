@@ -25,6 +25,14 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'g[ngx-charts-circle-series-ext]',
   template: `
+    <svg:g *ngFor="let circle of circles">
+      <svg:circle
+        [attr.cx]="circle.cx"
+        [attr.cy]="circle.cy"
+        [attr.r]="circle.radius-2"
+        [attr.fill]="circle.color"
+      />
+    </svg:g>
     <svg:g *ngIf="circle">
       <defs>
         <svg:g ngx-charts-svg-linear-gradient
@@ -81,6 +89,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class CircleSeriesExtComponent extends CircleSeriesComponent {
 
   @Input() pinfos;
+  circles: any;
   
   emptyMessage = "";
 
@@ -120,6 +129,18 @@ export class CircleSeriesExtComponent extends CircleSeriesComponent {
     // this.barVisible = false;
     this.circle.opacity = 0;
     this.deactivate.emit({name: this.data.name});
+  }
+
+  getAllCircles(): any{
+    return this.data.series.map((d, idx) => {
+      return this.mapDataPointToCircle(d, idx);
+    })
+  }
+
+  update(): void {
+    this.circle = this.getActiveCircle();
+    this.circles = this.getAllCircles();
+    console.log(this.circles)
   }
 
 }

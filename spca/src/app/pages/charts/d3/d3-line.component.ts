@@ -18,6 +18,8 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   pinfos = {};
   view = [];
 
+  roundDomains = true;
+  autoScale = true;
   showLegend = true;
   showXAxis = true;
   showYAxis = true;
@@ -67,12 +69,16 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
         this.pinfos = data.result.pinfos;
         this.xAxisLabel = `ScenarioID: ${data.result.baseInfos.scenarioId}/${data.result.baseInfos.scenarioName}`;
         //resize chart view based on the window size
-        window.dispatchEvent(new Event('resize'));
+        setTimeout(function(){
+          window.dispatchEvent(new Event('resize'));
+        }, 1200);
       });
   }
 
   ngAfterViewInit(): void {
-    window.dispatchEvent(new Event('resize'));
+    setTimeout(function(){
+      window.dispatchEvent(new Event('resize'));
+    }, 600);
   }
 
   ngOnDestroy(): void {
