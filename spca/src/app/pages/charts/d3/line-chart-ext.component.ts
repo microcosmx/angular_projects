@@ -173,14 +173,13 @@ export class LineChartExtComponent extends LineChartComponent {
   }
 
   onClick(data, series?): void {
-    if (series) { // legend click
+    if (series) { // circle click
       data.series = series.name;
       for(let item of this.xinfos){
         this.xtickInfos[item.name] = item;
       }
       data.extraInfo = this.xtickInfos[data.name]
-    }else{ //circle click
-      //hide or display series
+    }else{ // legend click
       if(this.resultsAll.length <= 0){
         this.resultsAll = deepCopy(this.results);
       }

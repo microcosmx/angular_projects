@@ -69,16 +69,25 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
         this.pinfos = data.result.pinfos;
         this.xAxisLabel = `ScenarioID: ${data.result.baseInfos.scenarioId}/${data.result.baseInfos.scenarioName}`;
         //resize chart view based on the window size
+        
         setTimeout(function(){
-          window.dispatchEvent(new Event('resize'));
-        }, 1200);
+          this.view = [window.innerWidth - 60, 360 ]; 
+          // let event = null;
+          // if(typeof(Event) === 'function') {
+          //   event = new Event("resize");
+          // }else{
+          //   event = document.createEvent("resize");
+          //   event.initEvent("resize", true, true);
+          // }
+          // window.dispatchEvent(event);
+        }.bind(this), 1200);
       });
   }
 
   ngAfterViewInit(): void {
     setTimeout(function(){
-      window.dispatchEvent(new Event('resize'));
-    }, 600);
+      this.view = [window.innerWidth - 60, 360 ]; 
+    }.bind(this), 600);
   }
 
   ngOnDestroy(): void {
@@ -88,7 +97,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   onSelect(event): void{
     console.log(event);
     if(typeof event === "object"){
-      this.onSelectAction.emit(event.extraInfo);
+      (event.series=="New Price") && this.onSelectAction.emit(event.extraInfo);
     }
   }
 

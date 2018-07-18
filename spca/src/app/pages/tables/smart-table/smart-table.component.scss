@@ -10,19 +10,32 @@ nb-card {
 @include nb-install-component() {
   ng2-smart-table /deep/ table 
   {
-    margin: 0;
+    margin: 1rem 0;
+    white-space: normal;
+    display: table;
+    table-layout: auto;
     thead{
       display: none;
     }
+    tbody{
+      overflow-y: hidden;
+    }
     tr {
+      // table-layout: auto;
+      // display: table-row;
+      border: medium none;
+      background-color: white;
       th, td{
+        display: table-cell;
         font-family: Arial;
         border: medium none;
         font-size: 0.8rem;
         text-align: left;
+        padding: 0 1.25rem;
+        height: 20px;
         // width: 33%;
 
-        // word-break: break-all;
+        word-break: break-all;
         // white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;

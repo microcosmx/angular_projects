@@ -140,7 +140,7 @@ export class CircleSeriesExtComponent extends CircleSeriesComponent {
   update(): void {
     this.circle = this.getActiveCircle();
     this.circles = this.getAllCircles();
-    console.log(this.circles)
+    // console.log(this.circles)
   }
 
 }
