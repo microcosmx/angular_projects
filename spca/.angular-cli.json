@@ -25,7 +25,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "./app/@theme/styles/styles.scss"
+        "./app/@theme/styles/styles.scss",
+        "styles.scss"
       ],
       "scripts": [
       ],
