@@ -16,6 +16,7 @@
     "start": "ng serve --host 0.0.0.0",
     "proxy": "ng serve --proxy proxy.config.json",
     "proxy:ssl": "ng serve --proxy proxy.config.json --ssl 1 --ssl-key ../ssl/demandtec.key --ssl-cert ../ssl/demandtec.cert",
+    "build:local": "ng build --extract-css --sourcemaps --verbose",
     "build": "ng build --prod --aot --build-optimizer",
     "build:prod": "npm run build -- --prod --aot",
     "test": "ng test -sr",
