@@ -3,6 +3,10 @@
 @import '~@nebular/theme/styles/global/bootstrap/breakpoints';
 
 @include nb-install-component() {
+  nb-layout /deep/ .scrollable-container{
+    overflow: hidden;
+  }
+
   nb-layout-column.small {
     flex: 0.15 !important;
   }

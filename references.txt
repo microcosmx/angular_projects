@@ -1,5 +1,8 @@
 
 
+build:
+https://github.com/angular/angular-cli/wiki/build
+
 ssl:
 npm config set strict-ssl true
 npm config set cafile ../ssl/demandtec.cert

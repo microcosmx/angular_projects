@@ -12,10 +12,11 @@
   "scripts": {
     "ng": "ng",
     "conventional-changelog": "conventional-changelog",
+    "debug": "ng serve --host 0.0.0.0 --extract-css --sourcemaps --verbose",
     "start": "ng serve --host 0.0.0.0",
     "proxy": "ng serve --proxy proxy.config.json",
     "proxy:ssl": "ng serve --proxy proxy.config.json --ssl 1 --ssl-key ../ssl/demandtec.key --ssl-cert ../ssl/demandtec.cert",
-    "build": "ng build --prod --aot",
+    "build": "ng build --prod --aot --build-optimizer",
     "build:prod": "npm run build -- --prod --aot",
     "test": "ng test -sr",
     "test:coverage": "rimraf coverage && npm run test -- -cc",

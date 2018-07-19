@@ -86,6 +86,43 @@ import {
   ]
 })
 export class TooltipAreaExt extends TooltipArea {
-  
+
+  constructor(private renderer1: Renderer) { 
+    super(renderer1);
+  }
+
+  mouseMove(event) {
+    const xPos = event.pageX - event.target.getBoundingClientRect().left;
+
+    const closestIndex = this.findClosestPointIndex(xPos);
+    const closestPoint = this.xSet[closestIndex];
+    this.anchorPos = this.xScale(closestPoint);
+    this.anchorPos = Math.max(0, this.anchorPos);
+    this.anchorPos = Math.min(this.dims.width, this.anchorPos);
+
+    this.anchorValues = this.getValues(closestPoint);
+    if (this.anchorPos !== this.lastAnchorPos) {
+      if(typeof(MouseEvent) === 'function') {
+        let ev = new MouseEvent('mouseleave', {bubbles: false});
+        this.renderer1.invokeElementMethod(this.tooltipAnchor.nativeElement, 'dispatchEvent', [ev]);
+      }else{
+        if(document["createEventObject"]) {
+          this.tooltipAnchor.nativeElement.fireEvent("mouseleave");
+        } else {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("mouseleave", false, true);
+            this.renderer1.invokeElementMethod(this.tooltipAnchor.nativeElement, 'dispatchEvent', [evt]);
+            // this.tooltipAnchor.nativeElement.dispatchEvent(evt);
+        }
+      }
+      this.anchorOpacity = 0.7;
+      this.hover.emit({
+        value: closestPoint
+      });
+      this.showTooltip();
+
+      this.lastAnchorPos = this.anchorPos;
+    }
+  }
 
 }

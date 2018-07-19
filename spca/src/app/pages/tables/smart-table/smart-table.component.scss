@@ -16,13 +16,15 @@ nb-card {
     table-layout: auto;
     thead{
       display: none;
+      // display: table-header-group;
     }
     tbody{
       overflow-y: hidden;
+      display: table-row-group
     }
     tr {
-      // table-layout: auto;
-      // display: table-row;
+      table-layout: auto;
+      display: table-row;
       border: medium none;
       background-color: white;
       th, td{
