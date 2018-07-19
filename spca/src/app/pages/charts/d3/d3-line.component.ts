@@ -72,10 +72,11 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
         
         setTimeout(function(){
           this.view = [window.innerWidth - 60, 360 ]; 
+          // let event = null;
           // if(typeof(Event) === 'function') {
-          //   var event = new Event("resize");
+          //   event = new Event("resize");
           // }else{
-          //   var event = document.createEvent("resize");
+          //   event = document.createEvent("resize");
           //   event.initEvent("resize", true, true);
           // }
           // window.dispatchEvent(event);
