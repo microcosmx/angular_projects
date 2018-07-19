@@ -200,6 +200,54 @@ export class LineChartExtComponent extends LineChartComponent {
   // getScaleType(values): string {
   //   return 'linear';
   // }
+
+  // getYScale(domain, height): any {
+  //   const scale = scaleLinear()
+  //     .range([height, 0])
+  //     .domain(domain);
+
+  //   return this.roundDomains ? scale.nice() : scale;
+  // }
+
+  // getYDomain(): any[] {
+  //   const domain = [];
+  //   for (const results of this.results) {
+  //     for (const d of results.series) {
+  //       if (domain.indexOf(d.value) < 0) {
+  //         domain.push(d.value);
+  //       }
+  //       if (d.min !== undefined) {
+  //         this.hasRange = true;
+  //         if (domain.indexOf(d.min) < 0) {
+  //           domain.push(d.min);
+  //         }
+  //       }
+  //       if (d.max !== undefined) {
+  //         this.hasRange = true;
+  //         if (domain.indexOf(d.max) < 0) {
+  //           domain.push(d.max);
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   const values = [...domain];
+  //   if (!this.autoScale) {
+  //     values.push(0);
+  //   }
+
+  //   const min = this.yScaleMin
+  //     ? this.yScaleMin
+  //     : Math.min(...values);
+
+  //   const max = this.yScaleMax
+  //     ? this.yScaleMax
+  //     : Math.max(...values);
+
+  //   // let delta = (min + max)/10
+  //   // return [min-delta, max+delta];
+  //   return [min, max];
+  // }
   
 }
 

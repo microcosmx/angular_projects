@@ -18,6 +18,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   pinfos = {};
   view = [];
 
+  showGridLines = true;
   roundDomains = true;
   autoScale = true;
   showLegend = true;
