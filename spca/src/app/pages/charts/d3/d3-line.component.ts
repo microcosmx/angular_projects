@@ -1,6 +1,6 @@
 
 
-import { Component, OnDestroy, OnInit, ViewChild, AfterViewInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, Renderer, AfterViewInit, EventEmitter, Input, Output } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 
 import { D3LineService } from '../../../@core/data/d3-line.service';
@@ -19,7 +19,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   view = [];
 
   showGridLines = true;
-  roundDomains = true;
+  roundDomains = false;
   autoScale = true;
   showLegend = true;
   showXAxis = true;
@@ -42,6 +42,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   @Output() onSelectAction = new EventEmitter<boolean>();
 
   constructor(
+    private renderer: Renderer,
     private theme: NbThemeService, 
     private service: D3LineService,
     private translate: TranslateService
@@ -81,6 +82,8 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
           //   event.initEvent("resize", true, true);
           // }
           // window.dispatchEvent(event);
+          this.renderer.setElementStyle(document.querySelector("div.loading-mark"), "display", "none");
+          
         }.bind(this), 1200);
       });
   }

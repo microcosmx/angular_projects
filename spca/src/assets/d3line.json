@@ -41,6 +41,7 @@
     
     "series": [{
       "name": "Cost",
+      "value": "Cost",
       "series": [
         {
           "name": 1,
@@ -70,6 +71,7 @@
     },
     {
       "name": "New Price",
+      "value": "New Price",
       "series": [
         {
           "name": 1,
@@ -99,6 +101,7 @@
     },
     {
       "name": "Current Price",
+      "value": "Current Price",
       "series": [
         {
           "name": 1,
@@ -128,6 +131,7 @@
     },
     {
       "name": "Competitor Price",
+      "value": "Competitor Price",
       "series": [
         {
           "name": 1,

@@ -42,6 +42,26 @@ import {
 })
 export class LegendExtComponent extends LegendComponent {
 
-    
+  // getLegendEntries(): any[] {
+  //   const items = [];
+
+  //   for(const label of this.data) {
+  //     const formattedLabel = formatLabel(label);
+
+  //     const idx = items.findIndex((i) => {
+  //       return i.label === formattedLabel;
+  //     });
+
+  //     if (idx === -1) {
+  //       items.push({
+  //         label,
+  //         formattedLabel,
+  //         color: this.colors.getColor(label)
+  //       });
+  //     }
+  //   }
+
+  //   return items;
+  // }
 
 }

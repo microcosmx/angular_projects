@@ -23,11 +23,12 @@ nb-card {
       display: table-row-group
     }
     tr {
+      background-color: white !important;
       table-layout: auto;
       display: table-row;
       border: medium none;
-      background-color: white;
       th, td{
+        background-color: white !important;
         display: table-cell;
         font-family: Arial;
         border: medium none;

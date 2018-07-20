@@ -168,6 +168,8 @@ export class LineChartExtComponent extends LineChartComponent {
   resultsAll: any = [];
   xtickInfos: any = {};
 
+  seriesLabel: any = [];
+
   ngAfterViewInit(): void {
     
   }
@@ -197,6 +199,27 @@ export class LineChartExtComponent extends LineChartComponent {
 
   }
 
+  update(): void {
+    super.update();
+
+    this.seriesLabel = this.getSeriesLabel();
+    this.legendOptions = this.getUpdateLegendOptions();
+  }
+
+  getSeriesLabel(): any[] {
+    return this.results.map(d => d.value);
+  }
+
+  getUpdateLegendOptions() {
+    let opts = this.getLegendOptions();
+    if(this.seriesLabel.length > 0){
+      opts.domain = opts.domain.map((x, idx) => {
+        return this.seriesLabel[idx] || x;
+      })
+    }
+    return opts;
+  }
+
   // getScaleType(values): string {
   //   return 'linear';
   // }
@@ -209,45 +232,45 @@ export class LineChartExtComponent extends LineChartComponent {
   //   return this.roundDomains ? scale.nice() : scale;
   // }
 
-  // getYDomain(): any[] {
-  //   const domain = [];
-  //   for (const results of this.results) {
-  //     for (const d of results.series) {
-  //       if (domain.indexOf(d.value) < 0) {
-  //         domain.push(d.value);
-  //       }
-  //       if (d.min !== undefined) {
-  //         this.hasRange = true;
-  //         if (domain.indexOf(d.min) < 0) {
-  //           domain.push(d.min);
-  //         }
-  //       }
-  //       if (d.max !== undefined) {
-  //         this.hasRange = true;
-  //         if (domain.indexOf(d.max) < 0) {
-  //           domain.push(d.max);
-  //         }
-  //       }
-  //     }
-  //   }
+  getYDomain(): any[] {
+    const domain = [];
+    for (const results of this.results) {
+      for (const d of results.series) {
+        if (domain.indexOf(d.value) < 0) {
+          domain.push(d.value);
+        }
+        if (d.min !== undefined) {
+          this.hasRange = true;
+          if (domain.indexOf(d.min) < 0) {
+            domain.push(d.min);
+          }
+        }
+        if (d.max !== undefined) {
+          this.hasRange = true;
+          if (domain.indexOf(d.max) < 0) {
+            domain.push(d.max);
+          }
+        }
+      }
+    }
 
-  //   const values = [...domain];
-  //   if (!this.autoScale) {
-  //     values.push(0);
-  //   }
+    const values = [...domain];
+    if (!this.autoScale) {
+      values.push(0);
+    }
 
-  //   const min = this.yScaleMin
-  //     ? this.yScaleMin
-  //     : Math.min(...values);
+    const min = this.yScaleMin
+      ? this.yScaleMin
+      : Math.min(...values);
 
-  //   const max = this.yScaleMax
-  //     ? this.yScaleMax
-  //     : Math.max(...values);
+    const max = this.yScaleMax
+      ? this.yScaleMax
+      : Math.max(...values);
 
-  //   // let delta = (min + max)/10
-  //   // return [min-delta, max+delta];
-  //   return [min, max];
-  // }
+    let delta = (min + max)/10
+    return [min-delta, max+delta];
+    // return [min, max];
+  }
   
 }
 
