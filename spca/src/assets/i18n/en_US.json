@@ -1,0 +1,39 @@
+{
+	"DROPDOWN": {
+		"SELECTED": "{{ number }} selected",
+		"FILTER": {
+			"SELECTED_ONLY": "Show selected only",
+			"SEARCH": "Search",
+			"NO_RESULTS": "No search results"
+		}
+	},
+	"TOPNAV": {
+		"SKIP_TO_MAIN": "Skip to main content"
+	},
+	"TABS": {
+		"BUTTON_ARIA_LEFT": "Go to the previous tab",
+		"BUTTON_ARIA_RIGHT": "Go to the next tab"
+	},
+	"RBV":{
+	    "PROD_DESC":"Product Description",
+	    "UPC":"UPC",
+	    "ZONE":"Zone",
+	    "STORE":"Store",
+	    "PRICE_RANGE":"Price range by rule",
+	    "CUR_PRICE":"Current price",
+	    "RECO_PRICE":"Recommended price",
+	    "PRIORITY":"Priority",
+	    "RULE":"Rule",
+	    "RETAIL_PRICE":"Retail Price",
+	    "PRICE":"Price",
+	    "PRICE_CHG":"Price Chg",
+	    "LOW":"Low",
+	    "HIGH":"High",
+	    "TRANSFER_PRICE":"Transfer Price"
+	},
+    "SPCHA":{
+        "yAxisLabel": "Price",
+        "rbvTab": "Price Change by Rule",
+        "spcaTab": "Scenario Price Change History Analysis"
+    }
+}

@@ -1,7 +1,7 @@
 
 
 import { Component, OnDestroy, OnInit, ViewChild, AfterViewInit, EventEmitter, Input, Output } from '@angular/core';
-
+import { Globals } from '../../globals';
 import { NbTabsetExtComponent } from './tabsetext.component';
 
 @Component({
@@ -13,12 +13,19 @@ import { NbTabsetExtComponent } from './tabsetext.component';
 })
 export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
 
+  runId : string;
+  resultId : string;
+  fromSkuZone : string;
+  
   @ViewChild(NbTabsetExtComponent) tabsComponent;
   @ViewChild('rbvContent') rbvContentTemplate;
 
   // items: any = ["RBV0"];
 
-  constructor() {
+  constructor(private global: Globals) {
+    this.runId = this.global.runid;
+    this.resultId = this.global.resultid;
+    this.fromSkuZone = this.global.fromskuzone;
   }
 
   ngOnInit(): void {

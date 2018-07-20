@@ -1,0 +1,127 @@
+{
+    "result": {
+        "series": [
+            {
+                "name": "Cost",
+                "series": [
+                    {
+                        "name": "0",
+                        "value": 2.1132
+                    },
+                    {
+                        "name": "1",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "2",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "3",
+                        "value": 3.0
+                    }
+                ]
+            },
+            {
+                "name": "Current Price",
+                "series": [
+                    {
+                        "name": "0",
+                        "value": 3.09
+                    },
+                    {
+                        "name": "1",
+                        "value": 3.09
+                    },
+                    {
+                        "name": "2",
+                        "value": 3.09
+                    },
+                    {
+                        "name": "3",
+                        "value": 3.09
+                    }
+                ]
+            },
+            {
+                "name": "New Price",
+                "series": [
+                    {
+                        "name": "0",
+                        "value": 3.09
+                    },
+                    {
+                        "name": "1",
+                        "value": 4.39
+                    },
+                    {
+                        "name": "2",
+                        "value": 5.33
+                    },
+                    {
+                        "name": "3",
+                        "value": 5.33
+                    }
+                ]
+            },
+            {
+                "name": "Competitor Price",
+                "series": []
+            }
+        ],
+        "xinfos": [
+            {
+                "reason": "Optimized",
+                "name": "0",
+                "runstate": "",
+                "date": "2018-07-17",
+                "runid": "15201",
+                "resultid": "331159975",
+                "fromskuzone": "0"
+            },
+            {
+                "reason": "Prices Updated",
+                "name": "1",
+                "runstate": "",
+                "date": "2018-07-17",
+                "runid": "15207",
+                "resultid": "331162142",
+                "fromskuzone": "0"
+            },
+            {
+                "reason": "Recalculated",
+                "name": "2",
+                "runstate": "",
+                "date": "2018-07-17",
+                "runid": "15219",
+                "resultid": "331175412",
+                "fromskuzone": "0"
+            },
+            {
+                "reason": "Recalculated",
+                "name": "3",
+                "runstate": "",
+                "date": "2018-07-17",
+                "runid": "15253",
+                "resultid": "331187290",
+                "fromskuzone": "0"
+            }
+        ],
+        "pinfos": {
+            "Cost": {
+                "2": [
+                    {"name": "info0", "value": "value0"}
+                ],
+                "3": [
+                    {"name": "info1", "value": "value1"},
+                    {"name": "info2", "value": "value2"},
+                    {"name": "info3", "value": "value3"}
+                ]
+                }
+        },
+        "baseInfos": {
+            "scenarioId": "5769",
+            "scenarioName": "ylu-new pch-1_0718esafdfalsdfjlasdsfjas;dafjas;fja;fjdsa;11334日让人看反馈☕️033333333多发发"
+        }
+    }
+}
