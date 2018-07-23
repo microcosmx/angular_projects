@@ -41,7 +41,7 @@
     
     "series": [{
       "name": "Cost",
-      "value": "Cost",
+      "value": "Cost Test",
       "series": [
         {
           "name": 1,

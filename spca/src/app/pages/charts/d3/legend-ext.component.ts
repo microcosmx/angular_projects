@@ -24,6 +24,7 @@ import {
               class="legend-label">
               <ngx-charts-legend-entry-ext
                 [label]="entry.label"
+                [labelDesc]="entry.labelDesc"
                 [formattedLabel]="entry.formattedLabel"
                 [color]="entry.color"
                 [isActive]="isActive(entry)"
@@ -42,26 +43,17 @@ import {
 })
 export class LegendExtComponent extends LegendComponent {
 
-  // getLegendEntries(): any[] {
-  //   const items = [];
+  @Input() dataDesc;
 
-  //   for(const label of this.data) {
-  //     const formattedLabel = formatLabel(label);
+  getLegendEntries(): any[] {
+    let entries = super.getLegendEntries();
 
-  //     const idx = items.findIndex((i) => {
-  //       return i.label === formattedLabel;
-  //     });
+    let uptEntries = entries.map((entry, idx) =>{
+      entry.labelDesc = this.dataDesc[idx];
+      return entry;
+    });
 
-  //     if (idx === -1) {
-  //       items.push({
-  //         label,
-  //         formattedLabel,
-  //         color: this.colors.getColor(label)
-  //       });
-  //     }
-  //   }
-
-  //   return items;
-  // }
+    return uptEntries;
+  }
 
 }

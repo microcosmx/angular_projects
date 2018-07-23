@@ -39,6 +39,7 @@ import {
           *ngIf="showLegend && legendType === 'legend'"
           class="chart-legend"
           [data]="legendOptions.domain"
+          [dataDesc]="legendOptions.domainDesc"
           [title]="legendOptions.title"
           [colors]="legendOptions.colors"
           [height]="view[1]"

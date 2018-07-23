@@ -168,7 +168,7 @@ export class LineChartExtComponent extends LineChartComponent {
   resultsAll: any = [];
   xtickInfos: any = {};
 
-  seriesLabel: any = [];
+  seriesDesc: any = [];
 
   ngAfterViewInit(): void {
     
@@ -202,20 +202,39 @@ export class LineChartExtComponent extends LineChartComponent {
   update(): void {
     super.update();
 
-    this.seriesLabel = this.getSeriesLabel();
-    this.legendOptions = this.getUpdateLegendOptions();
+    this.seriesDesc = this.getSeriesDomainDesc();
+    this.legendOptions = this.getLegendDescOptions();
   }
 
-  getSeriesLabel(): any[] {
+  getSeriesDomainDesc(): any[] {
     return this.results.map(d => d.value);
   }
 
-  getUpdateLegendOptions() {
+  getLegendDescOptions() {
     let opts = this.getLegendOptions();
-    if(this.seriesLabel.length > 0){
-      opts.domain = opts.domain.map((x, idx) => {
-        return this.seriesLabel[idx] || x;
+    if(this.seriesDesc.length > 0){
+      opts.domainDesc = opts.domain.map((x, idx) => {
+        return this.seriesDesc[idx] || x;
       })
+    }
+    return opts;
+  }
+
+  getLegendOptions() {
+    const opts = {
+      scaleType: this.schemeType,
+      colors: undefined,
+      domain: [],
+      domainDesc: [],
+      title: undefined
+    };
+    if (opts.scaleType === 'ordinal') {
+      opts.domain = this.seriesDomain;
+      opts.colors = this.colors;
+      opts.title = this.legendTitle;
+    } else {
+      opts.domain = this.yDomain;
+      opts.colors = this.colors.scale;
     }
     return opts;
   }

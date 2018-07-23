@@ -38,9 +38,15 @@ export class LegendEntryExtComponent extends LegendEntryComponent {
 
     selected: boolean = true;
 
+    @Input() labelDesc: string;
+
     toggleSelection(evt): void {
         this.selected = !this.selected;
         this.select.emit(this.formattedLabel);
+    }
+
+    get trimmedLabel(): string {
+    return this.labelDesc || '(empty)';
     }
 
 }
