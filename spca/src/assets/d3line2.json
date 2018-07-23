@@ -2,7 +2,9 @@
   "result": {
     "baseInfos": {
       "scenarioId": "666",
-      "scenarioName": "runName"
+      "scenarioName": "runName",
+      "duplicateFromRunId": 3,
+      "duplicateFromResultId": 1
     },
     "xinfos": [{
       "name": 1,

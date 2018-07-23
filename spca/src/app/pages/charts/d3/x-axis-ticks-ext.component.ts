@@ -55,11 +55,11 @@ export class XAxisTicksExtComponent extends XAxisTicksComponent {
   xtickInfos: any = {};
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.xinfos);
+    // console.log(this.xinfos);
     for(let item of this.xinfos){
       this.xtickInfos[item.name] = item;
     }
-    console.log(this.xtickInfos);
+    // console.log(this.xtickInfos);
 
     this.update();
   }

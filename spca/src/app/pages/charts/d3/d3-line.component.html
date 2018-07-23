@@ -16,7 +16,7 @@
   [showYAxisLabel]="showYAxisLabel"
   [xAxisLabel]="xAxisLabel"
   [yAxisLabel]="yAxisLabel"
-  [timeline]="xinfos.length > 12 ? true : false"
+  [timeline]="timeline"
   (select)="onSelect($event)"
   (window:resize)="onResize($event)"
 >
@@ -37,6 +37,8 @@
   </ng-template> -->
 
 </ngx-charts-line-chart-ext>
+
+<div class="dupFrom"> <a (click)="onDupClick($event)">Duplicate from: {{binfos.duplicateFromRunId}}</a></div>
 
 
 

@@ -5,12 +5,8 @@
                 "name": "Cost",
                 "series": [
                     {
-                        "name": "0",
-                        "value": 2.1132
-                    },
-                    {
                         "name": "1",
-                        "value": 3.0
+                        "value": 2.1132
                     },
                     {
                         "name": "2",
@@ -18,6 +14,10 @@
                     },
                     {
                         "name": "3",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "4",
                         "value": 3.0
                     }
                 ]
@@ -26,10 +26,6 @@
                 "name": "Current Price",
                 "series": [
                     {
-                        "name": "0",
-                        "value": 3.09
-                    },
-                    {
                         "name": "1",
                         "value": 3.09
                     },
@@ -39,6 +35,10 @@
                     },
                     {
                         "name": "3",
+                        "value": 3.09
+                    },
+                    {
+                        "name": "4",
                         "value": 3.09
                     }
                 ]
@@ -47,19 +47,19 @@
                 "name": "New Price",
                 "series": [
                     {
-                        "name": "0",
+                        "name": "1",
                         "value": 3.09
                     },
                     {
-                        "name": "1",
+                        "name": "2",
                         "value": 4.39
                     },
                     {
-                        "name": "2",
+                        "name": "3",
                         "value": 5.33
                     },
                     {
-                        "name": "3",
+                        "name": "4",
                         "value": 5.33
                     }
                 ]
@@ -72,7 +72,7 @@
         "xinfos": [
             {
                 "reason": "Optimized",
-                "name": "0",
+                "name": "1",
                 "runstate": "",
                 "date": "2018-07-17",
                 "runid": "15201",
@@ -81,7 +81,7 @@
             },
             {
                 "reason": "Prices Updated",
-                "name": "1",
+                "name": "2",
                 "runstate": "",
                 "date": "2018-07-17",
                 "runid": "15207",
@@ -90,7 +90,7 @@
             },
             {
                 "reason": "Recalculated",
-                "name": "2",
+                "name": "3",
                 "runstate": "",
                 "date": "2018-07-17",
                 "runid": "15219",
@@ -99,7 +99,7 @@
             },
             {
                 "reason": "Recalculated",
-                "name": "3",
+                "name": "4",
                 "runstate": "",
                 "date": "2018-07-17",
                 "runid": "15253",
@@ -109,10 +109,10 @@
         ],
         "pinfos": {
             "Cost": {
-                "2": [
+                "3": [
                     {"name": "info0", "value": "value0"}
                 ],
-                "3": [
+                "4": [
                     {"name": "info1", "value": "value1"},
                     {"name": "info2", "value": "value2"},
                     {"name": "info3", "value": "value3"}
@@ -121,7 +121,9 @@
         },
         "baseInfos": {
             "scenarioId": "5769",
-            "scenarioName": "ylu-new pch-1_0718esafdfalsdfjlasdsfjas;dafjas;fja;fjdsa;11334日让人看反馈☕️033333333多发发"
+            "scenarioName": "ylu-new pch-1_0718esafdfalsdfjlasdsfjas;dafjas;fja;fjdsa;11334日让人看反馈☕️033333333多发发",
+            "duplicateFromRunId": 6,
+            "duplicateFromResultId": 3
         }
     }
 }

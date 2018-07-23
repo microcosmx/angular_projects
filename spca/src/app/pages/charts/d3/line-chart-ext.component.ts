@@ -69,7 +69,7 @@ import {
           (dimensionsChanged)="updateYAxisWidth($event)">
         </svg:g>
         <svg:g [attr.clip-path]="clipPath">
-          <svg:g *ngFor="let series of results; trackBy:trackBy" [@animationState]="'active'">
+          <svg:g *ngFor="let series of results; trackBy: trackBy" [@animationState]="'active'">
             <svg:g ngx-charts-line-series
               [xScale]="xScale"
               [yScale]="yScale"
@@ -128,7 +128,7 @@ import {
         [scaleType]="scaleType"
         [legend]="legend"
         (onDomainChange)="updateDomain($event)">
-        <svg:g *ngFor="let series of results; trackBy:trackBy">
+        <svg:g *ngFor="let series of results; trackBy: trackBy">
           <svg:g ngx-charts-line-series
             [xScale]="timelineXScale"
             [yScale]="timelineYScale"
@@ -192,7 +192,7 @@ export class LineChartExtComponent extends LineChartComponent {
         this.hiddenSeries.add(data);
       }
       this.results = this.resultsAll.filter(rlt => !this.hiddenSeries.has(rlt.name));
-      console.log(this.results);
+      // console.log(this.results);
     }
 
     this.select.emit(data);
@@ -286,7 +286,7 @@ export class LineChartExtComponent extends LineChartComponent {
       ? this.yScaleMax
       : Math.max(...values);
 
-    let delta = (min + max)/10
+    let delta = (min + max)/5;
     return [min-delta, max+delta];
     // return [min, max];
   }

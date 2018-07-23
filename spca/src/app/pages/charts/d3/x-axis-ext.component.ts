@@ -52,11 +52,11 @@ export class XAxisExtComponent extends XAxisComponent {
   @Input() xinfos;
   
   ngOnInit(): void {
-    console.log(this.xinfos);
+    // console.log(this.xinfos);
   }
 
   emitTicksHeight({ height }): void {
-    const newLabelOffset = height + 25 + 5 + 10;
+    const newLabelOffset = height + 25 + 5 + 6;
     if (newLabelOffset !== this.labelOffset) {
       this.labelOffset = newLabelOffset;
       setTimeout(() => {

@@ -13,11 +13,14 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  multi = [];
-  xinfos = [];
-  pinfos = {};
+  multi:any = [];
+  xinfos:any = [];
+  pinfos:any = {};
+  binfos:any = {};
+
   view = [];
 
+  timeline = false;
   showGridLines = true;
   roundDomains = false;
   autoScale = true;
@@ -58,9 +61,9 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
       this.yAxisLabel = res;
     });
 
-    this.multi = this.service.data.result.series;
-    this.xinfos = this.service.data.result.xinfos;
-    this.pinfos = this.service.data.result.pinfos;
+    // this.multi = this.service.data.result.series;
+    // this.xinfos = this.service.data.result.xinfos;
+    // this.pinfos = this.service.data.result.pinfos;
   }
 
   ngOnInit(): void {
@@ -69,9 +72,11 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
         this.multi = data.result.series;
         this.xinfos = data.result.xinfos;
         this.pinfos = data.result.pinfos;
-        this.xAxisLabel = `ScenarioID: ${data.result.baseInfos.scenarioId}/${data.result.baseInfos.scenarioName}`;
+        this.binfos = data.result.baseInfos;
+
+        this.xAxisLabel = `ScenarioID: ${this.binfos.scenarioId}/${this.binfos.scenarioName}`;
+        this.timeline = this.xinfos.length > 12 ? true : false;
         //resize chart view based on the window size
-        
         setTimeout(function(){
           this.view = [window.innerWidth - 60, 360 ]; 
           // let event = null;
@@ -99,7 +104,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   onSelect(event): void{
-    console.log(event);
+    // console.log(event);
     if(typeof event === "object"){
       (event.series=="New Price") && this.onSelectAction.emit(event.extraInfo);
     }
@@ -108,6 +113,21 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   // [view]="view"
   onResize(event) { 
     this.view = [event.target.innerWidth - 60, 360 ]; 
+  }
+
+  getScaleType(values): string {
+    return 'linear';
+  }
+
+  onDupClick(event) { 
+    this.service.getMoreD3Lines()
+      .then(data => {
+        this.multi = data.result.series;
+        this.xinfos = data.result.xinfos;
+        this.pinfos = data.result.pinfos;
+        this.binfos = data.result.baseInfos;
+        this.timeline = this.xinfos.length > 12 ? true : false;
+      });
   }
 
 }
