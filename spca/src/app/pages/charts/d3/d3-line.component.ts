@@ -18,6 +18,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   pinfos:any = {};
   baseInfos:any = {};
   view = [];
+  duplicateIDs = [];
 
   timeline = false;
   showGridLines = true;
@@ -123,6 +124,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
     this.translate.get('spcaChart.xAxisLabelDesc').subscribe((res: string) => {this.xAxisLabelDesc = res;});
     this.xAxisLabel = `${this.xAxisLabelDesc}: ${this.baseInfos.scenarioId}/${this.baseInfos.scenarioName}`;
     this.timeline = this.xinfos.length > 12 ? true : false;
+    this.duplicateIDs = this.service.duplicateIDs;
   }
 
 }
