@@ -36,7 +36,7 @@ export class SmartTableService {
 
   private headers = new HttpHeaders({'Content-Type': 'application/json'});
   // private spcaUrl = '/demandtec/price/api/spcha/spchainfo';  // URL to web api
-
+  
   private spcaUrl = 'assets/spca.json';  // URL to web api
   // https://localhost/demandtec/price/api/spcha/spchainfo?runId=3&resultId=1&fromSkuZone=1
   // private spcaUrl = "/dt/demandtec/price/api/spcha/spchainfo?runId=3&resultId=1&fromSkuZone=1"
@@ -95,4 +95,5 @@ export class SmartTableService {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
   }
+  
 }
