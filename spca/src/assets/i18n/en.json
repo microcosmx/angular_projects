@@ -1,12 +1,11 @@
 {
-    "demo": {
-        "title": "Translation Title",
-        "text": "Translation Content"
-    },
     "emptyMessage": "None",
     "spcaChart": {
-        "yAxisLabel": "Price"
+        "yAxisLabel": "Price",
+        "xAxisLabelDesc": "ScenarioID"
     },
     "rbvTab": "Price Change by Rule",
-    "spcaTab": "Scenario Price Change History Analysis"
+    "spcaTab": "Scenario Price Change History Analysis",
+    "duplicate": "Duplicate From",
+    "dupEnd": "No More Duplicate From"
 }

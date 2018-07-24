@@ -38,7 +38,20 @@
 
 </ngx-charts-line-chart-ext>
 
-<div class="dupFrom"> <a (click)="onDupClick($event)">Duplicate from: {{binfos.duplicateFromRunId}}</a></div>
+<div class="dupFrom"> 
+  <span *ngIf="this.service.duplicateIDs && this.service.duplicateIDs[0]; else dupEnd" class="dupFromLink">
+    <a (click)="onDupClick($event)">{{'duplicate' | translate}}: {{this.service.duplicateIDs[0]}}</a>
+  </span>
+  <ng-template #dupEnd>
+    
+  </ng-template>
+
+  <span *ngIf="this.service.duplicateIDs && this.service.duplicateIDs.length > 1">
+    <span *ngFor="let dupID of this.service.duplicateIDs.slice(1)" class="dupFromDesc">
+        {{'duplicate' | translate}}: {{dupID}}
+    </span>
+  </span>
+</div>
 
 
 

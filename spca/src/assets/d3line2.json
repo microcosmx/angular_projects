@@ -3,8 +3,8 @@
     "baseInfos": {
       "scenarioId": "666",
       "scenarioName": "runName",
-      "duplicateFromRunId": 3,
-      "duplicateFromResultId": 1
+      "duplicateFromRunId": 333,
+      "duplicateFromResultId": 111
     },
     "xinfos": [{
       "name": 1,

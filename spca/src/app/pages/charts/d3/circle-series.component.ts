@@ -104,12 +104,12 @@ export class CircleSeriesExtComponent extends CircleSeriesComponent {
     //   <span class="tooltip-val">Customized Info</span>
     // `;
     // console.log(this.circle.data);
-    let extraData = this.pinfos && this.pinfos[this.circle.data.series] && this.pinfos[this.circle.data.series][this.circle.data.name];
+    let extraData = this.getExtraData();
     this.translate.get('emptyMessage').subscribe((res: string) => {
       this.emptyMessage = res;
     });
-    let resultString = '<span class="tooltip-label">Extra Informations:</span>';
-    if(extraData){
+    let resultString = '<span class="tooltip-label"></span>';
+    if(extraData && Object.entries(extraData).length > 0){
       for(let item of extraData){
         resultString += `<span class="tooltip-val">${item.name}: ${item.value}</span>`;
       }
@@ -120,13 +120,30 @@ export class CircleSeriesExtComponent extends CircleSeriesComponent {
     return resultString;
   }
 
+  getExtraData():any {
+    let extraData = {};
+    if(this.pinfos && this.circle && this.circle.data && this.circle.data.series && this.pinfos[this.circle.data.series]){
+      extraData = this.pinfos[this.circle.data.series][this.circle.data.name];
+    }
+    return extraData;
+  }
+
+  // onMouseEnter($event): void {
+  //   let extraData = this.getExtraData();
+  //   if(extraData && Object.entries(extraData).length > 0){
+  //     this.tooltipShowEvent = "all";
+  //   }else{
+  //     this.tooltipShowEvent = "none";
+  //   }
+  // }
+
   activateCircle(): void {
-    // this.barVisible = true;
+    this.barVisible = false;
     this.activate.emit({name: this.data.name});
   }
 
   deactivateCircle(): void {
-    // this.barVisible = false;
+    this.barVisible = false;
     this.circle.opacity = 0;
     this.deactivate.emit({name: this.data.name});
   }
@@ -141,6 +158,12 @@ export class CircleSeriesExtComponent extends CircleSeriesComponent {
     this.circle = this.getActiveCircle();
     this.circles = this.getAllCircles();
     // console.log(this.circles)
+    let extraData = this.getExtraData();
+    if(extraData && Object.entries(extraData).length > 0){
+      this.tooltipDisabled = false;
+    }else{
+      this.tooltipDisabled = true;
+    }
   }
 
 }

@@ -16,6 +16,8 @@ import { CircleSeriesExtComponent } from './d3/circle-series.component';
 import { LegendExtComponent } from './d3/legend-ext.component';
 import { LegendEntryExtComponent } from './d3/legend-entry-ext.component';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 const components = [
   D3LineComponent,
   LineChartExtComponent,
@@ -30,7 +32,7 @@ const components = [
 
 @NgModule({
   exports: components,
-  imports: [ThemeModule, ChartsRoutingModule, NgxChartsModule],
+  imports: [ThemeModule, ChartsRoutingModule, NgxChartsModule, TranslateModule.forChild()],
   declarations: [...routedComponents, ...components],
   providers: [
     D3LineService,

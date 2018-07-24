@@ -14,7 +14,10 @@ export class D3LineService {
   resultId : string;
   fromSkuZone : string;
 
+  d3LinesDataHistory: any[];
   d3LinesData: any;
+  duplicateIDs: any[];
+  baseInfosHist: any[];
   
   constructor(private http: HttpClient,private global: Globals) { 
     this.runId = this.global.runid;
@@ -41,7 +44,11 @@ export class D3LineService {
                .toPromise()
                .then(response => {
                   // console.log(response.json());
+                  this.d3LinesDataHistory = [];
+                  this.d3LinesDataHistory.unshift(response);
+
                   this.d3LinesData = response;
+                  this.preDataHandler(this.d3LinesData);
                   return this.d3LinesData;
                 })
                .catch(this.handleError);
@@ -50,16 +57,17 @@ export class D3LineService {
   getMoreD3Lines(): Promise<any> {
     let httpParams : HttpParams;
     httpParams = new HttpParams()
-                      .set('runId', this.runId)
-                      .set('resultId', this.resultId)
-                      .set('fromSkuZone', this.fromSkuZone)
-                      .set('duplicateFromRunId', this.d3LinesData.result.baseInfos.duplicateFromRunId)
-                      .set('duplicateFromResultId', this.d3LinesData.result.baseInfos.duplicateFromResultId);
+                      .set('runId', this.baseInfosHist[0].duplicateFromRunId)
+                      .set('resultId', this.baseInfosHist[0].duplicateFromResultId)
+                      .set('fromSkuZone', this.fromSkuZone);
     return this.http.get(this.d3lineMoreUrl,{params: httpParams})
                .toPromise()
                .then(response => {
                   // console.log(response.json());
+                  this.d3LinesDataHistory.unshift(response);
+
                   this.d3LinesData = this.mergeD3Data(response);
+                  this.preDataHandler(this.d3LinesData);
                   return this.d3LinesData;
                 })
                .catch(this.handleError);
@@ -113,11 +121,20 @@ export class D3LineService {
       }
       this.d3LinesData.result.pinfos = basePInfos;
 
-      // binfos
-      this.d3LinesData.result.baseInfos = Object.assign({}, ...this.d3LinesData.result.baseInfos, ...newData.result.baseInfos);
+      // baseInfos
+      this.d3LinesData.result.baseInfos = Object.assign({}, ...newData.result.baseInfos, ...this.d3LinesData.result.baseInfos);
     }
 
     return this.d3LinesData;
+  }
+
+  private preDataHandler(data) {
+    this.duplicateIDs = this.d3LinesDataHistory.map(hist => {
+      return hist.result.baseInfos.duplicateFromRunId;
+    })
+    this.baseInfosHist = this.d3LinesDataHistory.map(hist => {
+      return hist.result.baseInfos;
+    })
   }
 
   private handleError(error: any): Promise<any> {

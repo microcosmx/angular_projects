@@ -16,19 +16,19 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   multi:any = [];
   xinfos:any = [];
   pinfos:any = {};
-  binfos:any = {};
-
+  baseInfos:any = {};
   view = [];
 
   timeline = false;
   showGridLines = true;
-  roundDomains = false;
+  roundDomains = true;
   autoScale = true;
   showLegend = true;
   showXAxis = true;
   showYAxis = true;
   showXAxisLabel = true;
   xAxisLabel = 'Scenario';
+  xAxisLabelDesc = "ScenarioID";
   showYAxisLabel = true;
   yAxisLabel = 'Price';
   legend=true;
@@ -57,9 +57,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
       };
     });
 
-    this.translate.get('spcaChart.yAxisLabel').subscribe((res: string) => {
-      this.yAxisLabel = res;
-    });
+    this.translate.get('spcaChart.yAxisLabel').subscribe((res: string) => {this.yAxisLabel = res;});
 
     // this.multi = this.service.data.result.series;
     // this.xinfos = this.service.data.result.xinfos;
@@ -69,13 +67,8 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit(): void {
     this.service.getD3Lines()
       .then(data => {
-        this.multi = data.result.series;
-        this.xinfos = data.result.xinfos;
-        this.pinfos = data.result.pinfos;
-        this.binfos = data.result.baseInfos;
+        this.applyChartData(data);
 
-        this.xAxisLabel = `ScenarioID: ${this.binfos.scenarioId}/${this.binfos.scenarioName}`;
-        this.timeline = this.xinfos.length > 12 ? true : false;
         //resize chart view based on the window size
         setTimeout(function(){
           this.view = [window.innerWidth - 60, 360 ]; 
@@ -118,12 +111,18 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   onDupClick(event) { 
     this.service.getMoreD3Lines()
       .then(data => {
-        this.multi = data.result.series;
-        this.xinfos = data.result.xinfos;
-        this.pinfos = data.result.pinfos;
-        this.binfos = data.result.baseInfos;
-        this.timeline = this.xinfos.length > 12 ? true : false;
+        this.applyChartData(data);
       });
+  }
+
+  applyChartData(data: any) {
+    this.multi = data.result.series;
+    this.xinfos = data.result.xinfos;
+    this.pinfos = data.result.pinfos;
+    this.baseInfos = data.result.baseInfos;
+    this.translate.get('spcaChart.xAxisLabelDesc').subscribe((res: string) => {this.xAxisLabelDesc = res;});
+    this.xAxisLabel = `${this.xAxisLabelDesc}: ${this.baseInfos.scenarioId}/${this.baseInfos.scenarioName}`;
+    this.timeline = this.xinfos.length > 12 ? true : false;
   }
 
 }

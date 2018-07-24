@@ -6,6 +6,11 @@
     left: 30px;
     bottom: 6px;
     font-size: 0.8rem;
-    font-weight: 600;
-    color: blue;
+    .dupFromLink{
+        font-weight: 600;
+        color: blue;
+    }
+    .dupFromDesc{
+        margin: 0 1rem;
+    }
 }

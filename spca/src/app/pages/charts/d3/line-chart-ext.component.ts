@@ -243,52 +243,24 @@ export class LineChartExtComponent extends LineChartComponent {
     return 'linear';
   }
 
-  // getYScale(domain, height): any {
-  //   const scale = scaleLinear()
-  //     .range([height, 0])
-  //     .domain(domain);
+  getXDomain(): any[] {
+    let dmxSuper = super.getXDomain();
 
-  //   return this.roundDomains ? scale.nice() : scale;
-  // }
+    if(this.xinfos.length < 6){
+      let [min, max] = [...dmxSuper];
+      let delta = (min + max)/10;
+      return [min-delta, max+delta];
+    }
+    
+    return dmxSuper;
+  }
 
   getYDomain(): any[] {
-    const domain = [];
-    for (const results of this.results) {
-      for (const d of results.series) {
-        if (domain.indexOf(d.value) < 0) {
-          domain.push(d.value);
-        }
-        if (d.min !== undefined) {
-          this.hasRange = true;
-          if (domain.indexOf(d.min) < 0) {
-            domain.push(d.min);
-          }
-        }
-        if (d.max !== undefined) {
-          this.hasRange = true;
-          if (domain.indexOf(d.max) < 0) {
-            domain.push(d.max);
-          }
-        }
-      }
-    }
+    let dmySuper = super.getYDomain();
 
-    const values = [...domain];
-    if (!this.autoScale) {
-      values.push(0);
-    }
-
-    const min = this.yScaleMin
-      ? this.yScaleMin
-      : Math.min(...values);
-
-    const max = this.yScaleMax
-      ? this.yScaleMax
-      : Math.max(...values);
-
+    let [min, max] = [...dmySuper];
     let delta = (min + max)/5;
     return [min-delta, max+delta];
-    // return [min, max];
   }
   
 }
