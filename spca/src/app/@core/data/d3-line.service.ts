@@ -85,13 +85,13 @@ export class D3LineService {
         let newSeries = newData.result.series.filter(ns => ns.name == bs.name);
         if(newSeries && newSeries.length > 0){
           let newSs = newSeries[0].series;
-          if(newSs && newSs.length > 0){
-            // force to number
-            newSs = newSs.map(nss => {
-              nss.name = parseInt(nss.name);
-              return nss;
-            })
-          }
+          // if(newSs && newSs.length > 0){
+          //   // force to number
+          //   newSs = newSs.map(nss => {
+          //     nss.name = parseInt(nss.name);
+          //     return nss;
+          //   })
+          // }
           newBss = [...newSs, ...newBss];
         }
         bs.series = newBss;

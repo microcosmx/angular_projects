@@ -239,9 +239,9 @@ export class LineChartExtComponent extends LineChartComponent {
     return opts;
   }
 
-  // getScaleType(values): string {
-  //   return 'linear';
-  // }
+  getScaleType(values): string {
+    return 'linear';
+  }
 
   // getYScale(domain, height): any {
   //   const scale = scaleLinear()

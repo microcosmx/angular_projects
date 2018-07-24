@@ -115,10 +115,6 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
     this.view = [event.target.innerWidth - 60, 360 ]; 
   }
 
-  getScaleType(values): string {
-    return 'linear';
-  }
-
   onDupClick(event) { 
     this.service.getMoreD3Lines()
       .then(data => {
