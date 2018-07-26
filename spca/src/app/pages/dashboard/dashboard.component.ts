@@ -53,7 +53,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     this.tabsComponent.openTab(
       `${this.rbvTab} ${info.runid}`,
       this.rbvContentTemplate,
-      `RBV Content of ${info.runid}`,
+      {runid:info.runid,resultid:info.resultid,iszone:info.fromskuzone},
       true
     );
   }

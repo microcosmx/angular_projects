@@ -13,29 +13,25 @@ export class SpcaComponent implements OnInit {
   runId : string;
   resultId : string;
   fromSkuZone : string;
+  locale : string;
 
   constructor(
     private translate: TranslateService,
     private global: Globals
   ) {
-    translate.addLangs(['en', 'zh']);
-    translate.setDefaultLang('en');
-    let broswerLang = translate.getBrowserLang();
-    translate.use(broswerLang);
+    translate.setDefaultLang('en_US');
+    translate.use(this.locale);
   }
-
-  useLanguage(language: string) {
-    this.translate.use(language);
-  }
-  
   
   ngOnInit(): void {
-    this.runId = this.getUrlParameter('runId');
+    this.runId = this.getUrlParameter('runid');
     this.resultId = this.getUrlParameter('arg_objectID');
     this.fromSkuZone = this.getUrlParameter('arg_aggrlevel');
+    this.locale = this.getUrlParameter('arg_locale');
     this.global.runid = this.runId;
     this.global.resultid = this.resultId;
     this.global.fromskuzone = this.fromSkuZone;
+    this.global.locale = this.locale;
   }
   
   getUrlParameter(sParam) {

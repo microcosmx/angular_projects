@@ -5,4 +5,5 @@ export class Globals {
   public runid = '';
   public resultid = '';
   public fromskuzone = '';
+  public locale = '';
 }
