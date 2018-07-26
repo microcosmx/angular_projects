@@ -4,8 +4,8 @@
         "yAxisLabel": "Price",
         "xAxisLabelDesc": "ScenarioID"
     },
-    "rbvTab": "Price Change by Rule",
-    "spcaTab": "Scenario Price Change History Analysis",
-    "duplicate": "Duplicate From",
-    "dupEnd": "No More Duplicate From"
+    "rbvTab": "Price Change By Rule - RunID ",
+    "spcaTab": "Scenario Price Change History Analysis ",
+    "duplicate": "Duplicate From: RunID ",
+    "runId": "RunID"
 }

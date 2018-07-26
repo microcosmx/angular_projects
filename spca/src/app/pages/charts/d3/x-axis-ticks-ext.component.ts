@@ -11,6 +11,8 @@ import {
   ChangeDetectionStrategy
 } from '@angular/core';
 
+import { TranslateService } from '@ngx-translate/core';
+
 import {
   XAxisTicksComponent
  } from '@swimlane/ngx-charts/release/common/axes/x-axis-ticks.component';
@@ -28,10 +30,10 @@ import {
           [attr.transform]="textTransform"
           [style.font-size]="'12px'">
           <tspan x="0" y="0">{{xtickInfos[tick] && xtickInfos[tick].reason || ""}}</tspan>
-          <tspan x="12" y="16">{{xtickInfos[tick] && xtickInfos[tick].runid || ""}}</tspan>
+          <tspan x="12" y="16">{{this.runId}} {{xtickInfos[tick] && xtickInfos[tick].runid || ""}}</tspan>
           <tspan x="0" y="32">{{xtickInfos[tick] && xtickInfos[tick].date || ""}}</tspan>
         </text>
-        <svg:image *ngIf="xtickInfos[tick] && xtickInfos[tick].runstate==='pass'" x="-20" y="4" width="16" height="16" xlink:href="assets/images/pass.png"></image>
+        <svg:image *ngIf="xtickInfos[tick] && xtickInfos[tick].runstate==='pass'" x="-40" y="4" width="16" height="16" xlink:href="assets/images/pass.png"></image>
       </svg:g>
     </svg:g>
 
@@ -53,6 +55,16 @@ export class XAxisTicksExtComponent extends XAxisTicksComponent {
   @Input() xinfos: any;
 
   xtickInfos: any = {};
+  runId: string = "";
+
+  constructor(private translate: TranslateService) {
+    super();
+    this.translate.get('runId').subscribe((res: string) => {this.runId = res;});
+  }
+
+  ngOnInit(): void {
+    // console.log(this.xinfos);
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     // console.log(this.xinfos);

@@ -111,7 +111,8 @@ export class CircleSeriesExtComponent extends CircleSeriesComponent {
     let resultString = '<span class="tooltip-label"></span>';
     if(extraData && Object.entries(extraData).length > 0){
       for(let item of extraData){
-        resultString += `<span class="tooltip-val">${item.name}: ${item.value}</span>`;
+        // resultString += `<span class="tooltip-val">${item.name}: ${item.value}</span>`;
+        resultString += `<span class="tooltip-val">${item.name}</span>`;
       }
     }else{
       resultString += `<span class="tooltip-val">${this.emptyMessage}</span>`;

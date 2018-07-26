@@ -3,6 +3,7 @@
 import { Component, OnDestroy, OnInit, ViewChild, AfterViewInit, EventEmitter, Input, Output } from '@angular/core';
 import { Globals } from '../../globals';
 import { NbTabsetExtComponent } from './tabsetext.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'ngx-dashboard',
@@ -20,15 +21,21 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(NbTabsetExtComponent) tabsComponent;
   @ViewChild('rbvContent') rbvContentTemplate;
 
+  rbvTab: string;
+
   // items: any = ["RBV0"];
 
-  constructor(private global: Globals) {
+  constructor(private global: Globals,
+      private translate: TranslateService) {
     this.runId = this.global.runid;
     this.resultId = this.global.resultid;
     this.fromSkuZone = this.global.fromskuzone;
   }
 
   ngOnInit(): void {
+    this.translate.get('rbvTab').subscribe((res: string) => {
+      this.rbvTab = res;
+    });
   }
 
   ngAfterViewInit(): void {
@@ -44,7 +51,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
 
   openTab(info: any) {
     this.tabsComponent.openTab(
-      `RBV-${info.runid}`,
+      `${this.rbvTab} ${info.runid}`,
       this.rbvContentTemplate,
       `RBV Content of ${info.runid}`,
       true

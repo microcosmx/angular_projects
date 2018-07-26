@@ -40,7 +40,7 @@
 
 <div class="dupFrom"> 
   <span *ngIf="this.duplicateIDs && this.duplicateIDs[0]; else dupEnd" class="dupFromLink">
-    <a (click)="onDupClick($event)">{{'duplicate' | translate}}: {{this.service.duplicateIDs[0]}}</a>
+    <a (click)="onDupClick($event)">{{'duplicate' | translate}} {{this.service.duplicateIDs[0]}}</a>
   </span>
   <ng-template #dupEnd>
     
@@ -48,7 +48,7 @@
 
   <span *ngIf="this.duplicateIDs && this.duplicateIDs.length > 1">
     <span *ngFor="let dupID of this.duplicateIDs.slice(1)" class="dupFromDesc">
-        {{'duplicate' | translate}}: {{dupID}}
+        {{'duplicate' | translate}} {{dupID}}
     </span>
   </span>
 </div>
