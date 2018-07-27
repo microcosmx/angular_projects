@@ -1,0 +1,45 @@
+{
+    "result": {
+        "productName": "ARMORALL LIQUID",
+        "upc": "00845876_00000",
+        "lineGroup": "00845876_00000",
+        "zone": "00068",
+        "currency": "$",
+        "isFranchiseResult": false,
+        "minPrice": 3.902,
+        "maxPrice": 5.318,
+        "minTransferPrice": 1.7976931348623157E308,
+        "maxTransferPrice": 0.0,
+        "rbvData": [
+            {
+                "priority": "Current",
+                "ruleName": "Current Price",
+                "retailPrice": 4.47
+            },
+            {
+                "priority": "1",
+                "ruleName": "Initial Price: Line/Zone Mode",
+                "retailPrice": 4.73
+            },
+            {
+                "priority": "2",
+                "ruleName": "Line Price Rule",
+                "ruleDescription": "Enforce Line Prices",
+                "retailPrice": 4.73
+            },
+            {
+                "priority": "3",
+                "ruleName": "Price Rule - SKU Limits",
+                "ruleDescription": "The retail price change of each product must be between -15% and +10%.\r\n(-15%, +10%)",
+                "retailPrice": 4.73,
+                "lowBound": 4.02,
+                "upBound": 5.2
+            },
+            {
+                "priority": "Final",
+                "ruleName": "Recommended Price",
+                "retailPrice": 4.73
+            }
+        ]
+    }
+}
