@@ -9,6 +9,7 @@ import { ChartsModule } from '../charts/charts.module';
 import { TablesModule } from '../tables/tables.module';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { RbvModule } from '../../rbv/rbv.module';
 
 
 const components = [
@@ -26,6 +27,7 @@ const components = [
     ChartsModule,
     TablesModule,
     TranslateModule.forChild(),
+    RbvModule
   ],
   declarations: [
     ...components,
