@@ -56,7 +56,7 @@ export class XAxisExtComponent extends XAxisComponent {
   }
 
   emitTicksHeight({ height }): void {
-    const newLabelOffset = height + 25 + 5 + 3;
+    const newLabelOffset = height + 25 + 5 + 6;
     if (newLabelOffset !== this.labelOffset) {
       this.labelOffset = newLabelOffset;
       setTimeout(() => {
