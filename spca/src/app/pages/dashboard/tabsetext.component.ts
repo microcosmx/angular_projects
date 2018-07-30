@@ -130,6 +130,8 @@ export class NbTabsetExtComponent extends NbTabsetComponent {
 
     this.dynamicTabs.push(componentRef.instance as NbTabExtComponent);
 
+    return instance;
+
     // set it active
     // this.selectTab(this.dynamicTabs[this.dynamicTabs.length - 1]);
   }

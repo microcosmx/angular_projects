@@ -4,8 +4,12 @@
 .dupFrom{
     position: absolute;
     left: 30px;
-    bottom: 12px;
+    bottom: 6px;
     font-size: 0.8rem;
+    width: 93%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
     .dupFromLink{
         font-weight: 600;
         color: blue;
