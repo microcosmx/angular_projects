@@ -6,11 +6,13 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
 
 import { D3LineService } from './data/d3-line.service';
 import { SmartTableService } from './data/smart-table.service';
+import { UIUtilsService } from './utils/ui-utils.service';
 
 
 const NB_CORE_PROVIDERS = [
   D3LineService,
   SmartTableService,
+  UIUtilsService,
 ];
 
 @NgModule({

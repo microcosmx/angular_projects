@@ -18,6 +18,8 @@ import { LegendEntryExtComponent } from './d3/legend-entry-ext.component';
 
 import { TranslateModule } from '@ngx-translate/core';
 
+import { LoadingExtComponent } from '../loading.component';
+
 const components = [
   D3LineComponent,
   LineChartExtComponent,
@@ -28,6 +30,7 @@ const components = [
   CircleSeriesExtComponent,
   LegendExtComponent,
   LegendEntryExtComponent,
+  LoadingExtComponent,
 ];
 
 @NgModule({

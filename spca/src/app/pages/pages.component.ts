@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
 
+
+import { Component } from '@angular/core';
+import { UIUtilsService } from '../@core/utils/ui-utils.service';
 
 @Component({
   selector: 'ngx-pages',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class PagesComponent {
 
+  constructor(
+    private uiUtils: UIUtilsService,
+  ) {
+  }
+
+  ngOnInit(): void {
+    this.uiUtils.startLoading();
+  }
+  
+
+  
 }

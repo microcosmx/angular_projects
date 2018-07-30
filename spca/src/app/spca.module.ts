@@ -38,7 +38,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
   bootstrap: [SpcaComponent],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
-    Globals
+    Globals,
   ],
 })
 export class SpcaModule {

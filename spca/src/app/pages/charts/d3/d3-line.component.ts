@@ -5,6 +5,7 @@ import { NbThemeService } from '@nebular/theme';
 
 import { D3LineService } from '../../../@core/data/d3-line.service';
 import { TranslateService } from '@ngx-translate/core';
+import { UIUtilsService } from '../../../@core/utils/ui-utils.service';
 
 @Component({
   selector: 'ngx-d3-line',
@@ -35,6 +36,8 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   legend=true;
   colorScheme: any;
   themeSubscription: any;
+
+  loading = false;
   // xAxisTickFormatting = function(tick) {
   //   console.log(tick);
   //   let tickLabel = `<tspan x="0" y="0">${tick.reason}</tspan>
@@ -49,7 +52,8 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
     private renderer: Renderer,
     private theme: NbThemeService, 
     private service: D3LineService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private uiUtils: UIUtilsService,
   ) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
       const colors: any = config.variables;
@@ -66,6 +70,7 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.loading = true;
     this.service.getD3Lines()
       .then(data => {
         this.applyChartData(data);
@@ -81,9 +86,15 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
           //   event.initEvent("resize", true, true);
           // }
           // window.dispatchEvent(event);
-          this.renderer.setElementStyle(document.querySelector("div.loading-mark"), "display", "none");
+          // this.renderer.setElementStyle(document.querySelector("div.loading-mark"), "display", "none");
+          
+          this.uiUtils.endLoading();
+          // this.loading = false;
           
         }.bind(this), 1200);
+      })
+      .catch(ex =>{
+        this.uiUtils.endLoading();
       });
   }
 
@@ -110,9 +121,14 @@ export class D3LineComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   onDupClick(event) { 
+    this.uiUtils.startLoading();
     this.service.getMoreD3Lines()
       .then(data => {
         this.applyChartData(data);
+        this.uiUtils.endLoading();
+      })
+      .catch(ex =>{
+        this.uiUtils.endLoading();
       });
   }
 

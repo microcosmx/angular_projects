@@ -5,6 +5,8 @@ import { Globals } from '../../globals';
 import { NbTabsetExtComponent, NbTabExtComponent } from './tabsetext.component';
 import { TranslateService } from '@ngx-translate/core';
 
+import { UIUtilsService } from '../../@core/utils/ui-utils.service';
+
 @Component({
   selector: 'ngx-dashboard',
   styleUrls: [
@@ -28,7 +30,8 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
       private global: Globals,
-      private translate: TranslateService
+      private translate: TranslateService,
+      private uiUtils: UIUtilsService,
   ) {
     this.runId = this.global.runid;
     this.resultId = this.global.resultid;
@@ -60,6 +63,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
       true
     );
     this.tabsComponent.selectTab(this.dynamicOpenedTab);
+    this.uiUtils.startLoading();
   }
 
 }
