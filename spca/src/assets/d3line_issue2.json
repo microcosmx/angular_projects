@@ -1,0 +1,59 @@
+{
+    "result": {
+        "series": [
+            {
+                "name": "Cost",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 1.5741
+                    }
+                ]
+            },
+            {
+                "name": "Current Price",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 2.59
+                    }
+                ]
+            },
+            {
+                "name": "New Price",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 2.72
+                    }
+                ]
+            },
+            {
+                "name": "Competitor Price",
+                "series": []
+            }
+        ],
+        "xinfos": [
+            {
+                "reason": "Optimized",
+                "name": 1,
+                "runstate": "",
+                "date": "2018-07-30",
+                "runid": "15855",
+                "resultid": "334045174",
+                "fromskuzone": "1"
+            }
+        ],
+        "pinfos": {
+            "New Price": {
+                "1": [
+                    {}
+                ]
+            }
+        },
+        "baseInfos": {
+            "scenarioId": "5999",
+            "scenarioName": "ylutest-opt_0730"
+        }
+    }
+}

@@ -1,0 +1,142 @@
+{
+    "result": {
+        "series": [
+            {
+                "name": "Cost",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 1.1153
+                    },
+                    {
+                        "name": 2,
+                        "value": 1.1153
+                    },
+                    {
+                        "name": 3,
+                        "value": 1.1153
+                    },
+                    {
+                        "name": 4,
+                        "value": 1.1153
+                    }
+                ]
+            },
+            {
+                "name": "Current Price",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 1.99
+                    },
+                    {
+                        "name": 2,
+                        "value": 1.9899999999999998
+                    },
+                    {
+                        "name": 3,
+                        "value": 1.9899999999999998
+                    },
+                    {
+                        "name": 4,
+                        "value": 1.9899999999999998
+                    }
+                ]
+            },
+            {
+                "name": "New Price",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 2.04
+                    },
+                    {
+                        "name": 2,
+                        "value": 1.9899999999999998
+                    },
+                    {
+                        "name": 3,
+                        "value": 1.9899999999999998
+                    },
+                    {
+                        "name": 4,
+                        "value": 1.9899999999999998
+                    }
+                ]
+            },
+            {
+                "name": "Competitor Price",
+                "series": [
+                    {
+                        "name": 4,
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "xinfos": [
+            {
+                "reason": "Optimized",
+                "name": 1,
+                "runstate": "",
+                "date": "2018-07-26",
+                "runid": "15783",
+                "resultid": "333825196",
+                "fromskuzone": "1"
+            },
+            {
+                "reason": "Recalculated",
+                "name": 2,
+                "runstate": "",
+                "date": "2018-07-26",
+                "runid": "15794",
+                "resultid": "333825882",
+                "fromskuzone": "1"
+            },
+            {
+                "reason": "Prices Updated",
+                "name": 3,
+                "runstate": "",
+                "date": "2018-07-26",
+                "runid": "15797",
+                "resultid": "333826386",
+                "fromskuzone": "1"
+            },
+            {
+                "reason": "Prices Updated",
+                "name": 4,
+                "runstate": "",
+                "date": "2018-07-26",
+                "runid": "15806",
+                "resultid": "333833592",
+                "fromskuzone": "1"
+            }
+        ],
+        "pinfos": {
+            "New Price": {
+                "1": [
+                    {}
+                ],
+                "2": [
+                    {
+                        "name": "Override Price: $1.99"
+                    }
+                ],
+                "3": [
+                    {
+                        "name": "Override Price: $1.99"
+                    }
+                ],
+                "4": [
+                    {
+                        "name": "Override Price: $1.99"
+                    }
+                ]
+            }
+        },
+        "baseInfos": {
+            "scenarioId": "5972",
+            "scenarioName": "Amy mi Jul 26, 2018"
+        }
+    }
+}

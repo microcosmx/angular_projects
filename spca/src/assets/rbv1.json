@@ -1,0 +1,54 @@
+{
+    "result": {
+        "productName": "PRESTONE ANTIFREEZE 50/50",
+        "upc": "00060304_00000",
+        "lineGroup": "00060304_00000",
+        "zone": "00067",
+        "currency": "$",
+        "isFranchiseResult": false,
+        "minPrice": 7.343,
+        "maxPrice": 10.787,
+        "minTransferPrice": 1.7976931348623157E308,
+        "maxTransferPrice": 0.0,
+        "rbvData": [
+            {
+                "priority": "Current",
+                "ruleName": "Current Price",
+                "retailPrice": 8.55
+            },
+            {
+                "priority": "1",
+                "ruleName": "Initial Price: Line/Zone Mode",
+                "retailPrice": 8.98
+            },
+            {
+                "priority": "2",
+                "ruleName": "Vendor Cost Trigger",
+                "retailPrice": 9.93,
+                "lowBound": 9.93,
+                "upBound": 9.93
+            },
+            {
+                "priority": "3",
+                "ruleName": "Price Rule - SKU Limits",
+                "ruleDescription": "The retail price change of each product must be between -15% and +10%.\r\n(-15%, +10%)",
+                "retailPrice": 9.93,
+                "lowBound": 7.63,
+                "upBound": 9.88
+            },
+            {
+                "priority": "4",
+                "ruleName": "Competitive Rule",
+                "ruleDescription": "For Products in product group ALL PRODUCTS:  For Stores in store group ALL STORES:  The retail price of each product must be between -15.0% and +5.0% of the Mode Price of ZONE MARKET AVERAGE at all times (-15.0%, +5.0%)",
+                "retailPrice": 9.93,
+                "lowBound": 8.5,
+                "upBound": 10.5
+            },
+            {
+                "priority": "Final",
+                "ruleName": "Recommended Price",
+                "retailPrice": 9.93
+            }
+        ]
+    }
+}
