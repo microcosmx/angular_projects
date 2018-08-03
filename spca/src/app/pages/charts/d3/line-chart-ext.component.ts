@@ -7,7 +7,8 @@ import {
   HostListener,
   ChangeDetectionStrategy,
   ContentChild,
-  TemplateRef
+  TemplateRef,
+  SimpleChanges
 } from '@angular/core';
 import {
   trigger,
@@ -69,7 +70,7 @@ import {
           (dimensionsChanged)="updateYAxisWidth($event)">
         </svg:g>
         <svg:g [attr.clip-path]="clipPath">
-          <svg:g *ngFor="let series of results; trackBy:trackBy" [@animationState]="'active'">
+          <svg:g *ngFor="let series of displayedResults; trackBy:trackBy" [@animationState]="'active'">
             <svg:g ngx-charts-line-series
               [xScale]="xScale"
               [yScale]="yScale"
@@ -90,14 +91,14 @@ import {
               [xSet]="xSet"
               [xScale]="xScale"
               [yScale]="yScale"
-              [results]="results"
+              [results]="displayedResults"
               [colors]="colors"
               [tooltipDisabled]="true"
               [tooltipTemplate]="seriesTooltipTemplate"
               (hover)="updateHoveredVertical($event)"
             />
 
-            <svg:g *ngFor="let series of results">
+            <svg:g *ngFor="let series of displayedResults">
               <svg:g ngx-charts-circle-series-ext
                 [xScale]="xScale"
                 [yScale]="yScale"
@@ -128,7 +129,7 @@ import {
         [scaleType]="scaleType"
         [legend]="legend"
         (onDomainChange)="updateDomain($event)">
-        <svg:g *ngFor="let series of results; trackBy:trackBy">
+        <svg:g *ngFor="let series of displayedResults; trackBy:trackBy">
           <svg:g ngx-charts-line-series
             [xScale]="timelineXScale"
             [yScale]="timelineYScale"
@@ -165,10 +166,14 @@ export class LineChartExtComponent extends LineChartComponent {
   @Input() pinfos;
 
   hiddenSeries: Set<String> = new Set<String>();
-  resultsAll: any = [];
+  displayedResults: any = [];
   xtickInfos: any = {};
 
   seriesDesc: any = [];
+
+  ngOnInit(): void {
+    
+  }
 
   ngAfterViewInit(): void {
     
@@ -182,16 +187,12 @@ export class LineChartExtComponent extends LineChartComponent {
       }
       data.extraInfo = this.xtickInfos[data.name]
     }else{ // legend click
-      if(this.resultsAll.length <= 0){
-        this.resultsAll = deepCopy(this.results);
-      }
-      
       if(this.hiddenSeries.has(data)){
         this.hiddenSeries.delete(data);
       }else{
         this.hiddenSeries.add(data);
       }
-      this.results = this.resultsAll.filter(rlt => !this.hiddenSeries.has(rlt.name));
+      this.hideSeries();
       // console.log(this.results);
     }
 
@@ -199,8 +200,14 @@ export class LineChartExtComponent extends LineChartComponent {
 
   }
 
+  hideSeries(){
+    this.displayedResults = this.results.filter(rlt => !this.hiddenSeries.has(rlt.name));
+  }
+
   update(): void {
     super.update();
+
+    this.hideSeries();
 
     this.seriesDesc = this.getSeriesDomainDesc();
     this.legendOptions = this.getLegendDescOptions();
