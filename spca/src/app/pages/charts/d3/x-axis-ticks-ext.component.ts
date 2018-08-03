@@ -30,7 +30,12 @@ import {
           [attr.transform]="textTransform"
           [style.font-size]="'12px'">
           <tspan x="0" y="0">{{xtickInfos[tick] && xtickInfos[tick].reason || ""}}</tspan>
-          <tspan x="12" y="16">{{xtickInfos[tick] && (this.runId + xtickInfos[tick].runid) || ""}}</tspan>
+          <ng-container *ngIf="xtickInfos[tick] && xtickInfos[tick].runstate==='pass'; else tickNoPass">
+            <tspan x="12" y="16">{{xtickInfos[tick] && (this.runId + ' ' + xtickInfos[tick].runid) || ""}}</tspan>
+          </ng-container>
+          <ng-template #tickNoPass>
+            <tspan x="0" y="16">{{xtickInfos[tick] && (this.runId + ' ' + xtickInfos[tick].runid) || ""}}</tspan>
+          </ng-template>
           <tspan x="0" y="32">{{xtickInfos[tick] && xtickInfos[tick].date || ""}}</tspan>
         </text>
         <svg:image *ngIf="xtickInfos[tick] && xtickInfos[tick].runstate==='pass'" x="-40" y="4" width="16" height="16" xlink:href="assets/images/pass.png"></image>
