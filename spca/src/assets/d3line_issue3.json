@@ -1,0 +1,119 @@
+{
+    "result": {
+        "series": [
+            {
+                "name": "Cost",
+                "value": "Cost",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 0.652
+                    },
+                    {
+                        "name": 2,
+                        "value": 0.652
+                    },
+                    {
+                        "name": 3,
+                        "value": 0.652
+                    }
+                ]
+            },
+            {
+                "name": "Current Price",
+                "value": "Current Price",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 0.99
+                    },
+                    {
+                        "name": 2,
+                        "value": 0.99
+                    },
+                    {
+                        "name": 3,
+                        "value": 0.99
+                    }
+                ]
+            },
+            {
+                "name": "New Price",
+                "value": "New Price",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 1.04
+                    },
+                    {
+                        "name": 2,
+                        "value": 1.04
+                    },
+                    {
+                        "name": 3,
+                        "value": 1.04
+                    }
+                ]
+            },
+            {
+                "name": "Competitor Price",
+                "value": "Competitor Price",
+                "series": []
+            }
+        ],
+        "xinfos": [
+            {
+                "reason": "Optimized",
+                "name": 1,
+                "runstate": "",
+                "date": "Jul 23, 2018 9:12 AM",
+                "runid": "15599",
+                "resultid": "332812987",
+                "fromskuzone": "0"
+            },
+            {
+                "reason": "Recalculated",
+                "name": 2,
+                "runstate": "",
+                "date": "Jul 23, 2018 9:20 AM",
+                "runid": "15600",
+                "resultid": "332825043",
+                "fromskuzone": "0"
+            },
+            {
+                "reason": "Recalculated",
+                "name": 3,
+                "runstate": "",
+                "date": "Jul 23, 2018 9:53 AM",
+                "runid": "15601",
+                "resultid": "332838156",
+                "fromskuzone": "0"
+            }
+        ],
+        "pinfos": {
+            "New Price": {
+                "1": [
+                    {
+                        "name": "New Price: $1.04"
+                    }
+                ],
+                "2": [
+                    {
+                        "name": "New Price: $1.04"
+                    }
+                ],
+                "3": [
+                    {
+                        "name": "New Price: $1.04"
+                    }
+                ]
+            }
+        },
+        "baseInfos": {
+            "duplicateFromRunId": 15398,
+            "duplicateFromResultId": 331550731,
+            "scenarioId": "5902",
+            "scenarioName": "Batty test fp_Copy_21"
+        }
+    }
+}
