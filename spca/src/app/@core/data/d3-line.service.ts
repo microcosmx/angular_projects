@@ -29,7 +29,7 @@ export class D3LineService {
   // private d3lineUrl = '/demandtec/price/api/spcha/spchachart';  // URL to web api
   // private d3lineMoreUrl = '/demandtec/price/api/spcha/spchachart';  // URL to web api
   
-  private d3lineUrl = 'assets/d3line.json';  // URL to web api
+  private d3lineUrl = 'assets/d3line_issue_lang.json';  // URL to web api
   private d3lineMoreUrl = 'assets/d3line3.json';  // URL to web api
   // https://localhost/demandtec/price/api/spcha/spchachart?runId=3&resultId=1&fromSkuZone=1
   // private d3lineUrl = "/dt/demandtec/price/api/spcha/spchachart?runId=3&resultId=1&fromSkuZone=1"

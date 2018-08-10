@@ -1,0 +1,93 @@
+{
+    "result": {
+        "series": [
+            {
+                "name": "Cost",
+                "value": "Coût",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 8.0972
+                    },
+                    {
+                        "name": 2,
+                        "value": 8.0972
+                    }
+                ]
+            },
+            {
+                "name": "Current Price",
+                "value": "Prix actuel",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 12.99
+                    },
+                    {
+                        "name": 2,
+                        "value": 12.99
+                    }
+                ]
+            },
+            {
+                "name": "New Price",
+                "value": "Nouveau prix",
+                "series": [
+                    {
+                        "name": 1,
+                        "value": 5.11
+                    },
+                    {
+                        "name": 2,
+                        "value": 5.11
+                    }
+                ]
+            },
+            {
+                "name": "Competitor Price",
+                "value": "Prix du concurrent",
+                "series": []
+            }
+        ],
+        "xinfos": [
+            {
+                "reason": "Prix mis à jour",
+                "name": 1,
+                "runstate": "",
+                "date": "3 août 2018",
+                "runid": "15951",
+                "resultid": "334667649",
+                "fromskuzone": "1"
+            },
+            {
+                "reason": "Prix mis à jour",
+                "name": 2,
+                "runstate": "",
+                "date": "3 août 2018",
+                "runid": "15952",
+                "resultid": "334669246",
+                "fromskuzone": "1"
+            }
+        ],
+        "pinfos": {
+            "Nouveau prix": {
+                "1": [
+                    {
+                        "name": "Nouveau prix: 5,11 €"
+                    }
+                ],
+                "2": [
+                    {
+                        "name": "Nouveau prix: 5,11 €"
+                    }
+                ]
+            }
+        },
+        "baseInfos": {
+            "duplicateFromRunId": 15872,
+            "duplicateFromResultId": 334057997,
+            "scenarioId": "6030",
+            "scenarioName": "ylutest-opt_0730_Copy_11"
+        }
+    }
+}
